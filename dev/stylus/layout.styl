@@ -1,0 +1,261 @@
+@font-face 
+  font-family: 'DINNextCYR';
+  src: url('../fonts/DINNextCYR-Regular.eot');
+  src: url('../fonts/DINNextCYR-Regular.woff2') format('woff2'),
+       url('../fonts/DINNextCYR-Regular.woff') format('woff'),
+       url('../fonts/DINNextCYR-Regular.ttf') format('truetype'),
+       url('../fonts/DINNextCYR-Regular.svg#DINNextCYR-Regular') format('svg'),
+       url('../fonts/DINNextCYR-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+  
+@font-face 
+  font-family: 'DINNextCYR';
+  src: url('../fonts/DINNextCYR-Light.eot');
+  src: url('../fonts/DINNextCYR-Light.woff2') format('woff2'),
+       url('../fonts/DINNextCYR-Light.woff') format('woff'),
+       url('../fonts/DINNextCYR-Light.ttf') format('truetype'),
+       url('../fonts/DINNextCYR-Light.svg#DINNextCYR-Light') format('svg'),
+       url('../fonts/DINNextCYR-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+  
+@font-face 
+  font-family: 'DINNextCYR';
+  src: url('../fonts/DINNextCYR-Bold.eot');
+  src: url('../fonts/DINNextCYR-Bold.woff2') format('woff2'),
+       url('../fonts/DINNextCYR-Bold.woff') format('woff'),
+       url('../fonts/DINNextCYR-Bold.ttf') format('truetype'),
+       url('../fonts/DINNextCYR-Bold.svg#DINNextCYR-Bold') format('svg'),
+       url('../fonts/DINNextCYR-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+  
+@font-face 
+  font-family: 'DINNextCYR';
+  src: url('../fonts/DINNextCYR-BoldItalic.eot');
+  src: url('../fonts/DINNextCYR-BoldItalic.woff2') format('woff2'),
+       url('../fonts/DINNextCYR-BoldItalic.woff') format('woff'),
+       url('../fonts/DINNextCYR-BoldItalic.ttf') format('truetype'),
+       url('../fonts/DINNextCYR-BoldItalic.svg#DINNextCYR-BoldItalic') format('svg'),
+       url('../fonts/DINNextCYR-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: italic;
+  
+@font-face 
+  font-family: 'DINNextCYR';
+  src: url('../fonts/DINNextCYR-Italic.eot');
+  src: url('../fonts/DINNextCYR-Italic.woff2') format('woff2'),
+       url('../fonts/DINNextCYR-Italic.woff') format('woff'),
+       url('../fonts/DINNextCYR-Italic.ttf') format('truetype'),
+       url('../fonts/DINNextCYR-Italic.svg#DINNextCYR-Italic') format('svg'),
+       url('../fonts/DINNextCYR-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: italic;
+  
+html,
+body
+  background-color #0f0f0f
+  
+html
+  touch-action: manipulation
+  visibility visible !important
+  opacity 1 !important
+  -webkit-text-size-adjust none
+  +a($d)
+    font-size 1px
+  +btw($t, $d)
+    font-size (100 / 1024)vw
+  +btw($m, $t)
+    font-size (100 / 768)vw
+  +b($m)
+    font-size (100 / 320)vw
+  &.has-menu
+    &,
+    body
+      // overflow hidden 
+    .topnav
+      transform translateX(0)
+    .topbar
+      position relative
+      +btw($m, $t)
+        margin-top 60px
+      +b($m)
+        margin-top 48px
+      +b($t)
+        &:before
+          content "" 
+          display block
+          position absolute
+          z-index 2
+          top 0
+          left 0
+          width 100% 
+          height 100% 
+          background-color rgba(#000, 0.6) 
+      ~ .header
+        +b($t)
+          position fixed
+    .locator
+      +b($t)
+        opacity 0
+        visibility hidden
+    .header
+      border-bottom-color transparent 
+      &__burger
+        i
+          &:nth-child(1)
+            transform rotate(45deg) translate(-1px, 0)
+          &:nth-child(2)
+            opacity 0
+          &:nth-child(3)
+            transform rotate(-45deg) translate(-1px, 0)
+    .topbar,
+    .content
+      +btw($m, $t)
+        transform translateX(384px)
+      +b($m)
+        transform translateX(286px)
+    .content
+      overflow hidden
+      +b($t)
+        margin-top 0
+      &__fader
+        opacity 1
+        visibility visible
+  &.-dragged
+    user-select none
+    pointer-events none
+  &:before,
+  &:after
+    display none !important
+
+body
+  font 14px/1.571429em "DINNextCYR", Arial, "PT Sans", sans-serif
+  color #fff
+  
+button
+  font-family "DINNextCYR", Arial, "PT Sans", sans-serif
+    
+svg
+  transition-duration $speed
+  transition-property fill, stroke, color
+  &:not(:root)
+    overflow hidden
+
+svg:not(.-no-restyle)
+  fill currentcolor 
+  [fill]
+    fill currentcolor
+  [stroke]
+    stroke currentcolor
+  
+a
+  color $blue
+  transition-duration $speed
+  transition-property color  
+  svg
+    transition none
+  &:link
+    text-decoration none
+  &:hover
+    text-decoration underline
+  &:visited
+    text-decoration none
+  &:active
+    text-decoration none
+  &[href*="tel:"]
+    white-space nowrap
+
+.wrapper
+  width 100% 
+  overflow hidden
+  position relative
+  min-width 980px
+.container
+  margin auto
+  max-width 980px
+  position relative
+  width 100%
+    
+hr
+  display block
+  padding 0
+  margin 0
+  border none
+  background-color $bluee5
+  height 1px  
+  &.-bold
+    height 6px
+    border-radius 3px
+    background-color $blue3e 
+    +b($m)
+      margin 0 -3px 
+      
+img
+  &.-grayscale,
+  &.-grayscale-hoverable
+    filter grayscale(100%)
+  &.-grayscale-hoverable
+    transition filter $speed
+    &:hover
+      filter none
+
+.hidden
+  display none !important
+.hidden-below-d
+  +b($d)
+    display none !important
+.hidden-below-1160
+  +b(1200px)
+    display none !important
+.hidden-above-d
+  +a($d)
+    display none !important
+.hidden-below-t
+  +b($t)
+    display none !important
+.hidden-below-830
+  +b(830px)
+    display none !important
+.hidden-above-t
+  +a($t)
+    display none !important
+.hidden-below-m
+  +b($m)
+    display none !important
+.hidden-above-m
+  +a($m)
+    display none !important
+.hidden-between-m-t
+  +btw($m, $t)
+    display none !important
+.hidden-above-600
+  +a(600px)
+    display none !important
+.hidden-below-600
+  +b(600px)
+    display none !important
+.hidden-above-320
+  +a(320px)
+    display none !important
+.hidden-below-320
+  +b(320px)
+    display none !important
+    
+.nobr
+  white-space nowrap
+  
+.text-warning
+  color $redf4 
+  
+.js-tooltip
+  display inline-block
+  font-size 0
+  line-height 0
+  html.no-mobile &
+    cursor help
+  html.mobile &
+    cursor pointer
+.new-site-hidden
+  display none !important

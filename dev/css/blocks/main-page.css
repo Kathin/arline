@@ -1,0 +1,249 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.main-page__about {
+  height: 480px;
+  font-weight: 300;
+  text-align: center;
+  background: #0f0f0f;
+}
+.main-page__about .container {
+  padding: 57px 0;
+}
+.main-page__about h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 17px;
+}
+.main-page__about p {
+  font-size: 18px;
+  line-height: 21px;
+  padding-top: 20px;
+  max-width: 700px;
+  display: inline-block;
+}
+.main-page__people {
+  background: url("../img/back-people.png");
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.main-page__production {
+  height: 480px;
+  text-align: center;
+  background: #0f0f0f;
+}
+.main-page__production .container {
+  padding: 71px 0;
+}
+.main-page__production h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.main-page__production p {
+  font-size: 18px;
+  line-height: 21px;
+  padding-top: 20px;
+  max-width: 770px;
+  font-weight: 400;
+  display: inline-block;
+}
+.main-page__production-history {
+  margin-top: 40px;
+  display: inline-block;
+}
+.main-page__production-history-line {
+  font-size: 25px;
+  line-height: 35px;
+  color: #0cf;
+  font-weight: 300;
+}
+.main-page__160C {
+  background: url("../img/back-160C.png");
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.main-page__160C .container {
+  padding: 59px 0;
+  line-height: 0;
+}
+.main-page__160C img {
+  margin-bottom: 15px;
+}
+.main-page__160C h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 14px;
+}
+.main-page__160C h2 sup {
+  font-size: 24px;
+  vertical-align: 21px;
+}
+.main-page__160C p {
+  font-size: 18px;
+  line-height: 21px;
+  padding-top: 21px;
+  max-width: 770px;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.main-page__160C p sup {
+  font-size: 15px;
+  vertical-align: 7px;
+}
+.main-page__promo {
+  height: 480px;
+  text-align: center;
+  background: #0f0f0f;
+}
+.main-page__promo .container {
+  padding: 85px 0;
+}
+.main-page__promo img {
+  margin-left: 36px;
+}
+.main-page__benefits {
+  height: 480px;
+  text-align: center;
+  background: #161616;
+  color: #ccc;
+}
+.main-page__benefits .container {
+  padding: 67px 0;
+  line-height: 0;
+  font-size: 0;
+}
+.main-page__benefits h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 80px;
+}
+.main-page__benefits-list {
+  display: inline-block;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: top;
+}
+.main-page__benefits-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 94px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 20px;
+  font-size: 18px;
+  width: calc(100% / 5);
+  font-weight: 300;
+}
+.main-page__benefits-item:nth-child(1) img {
+  left: 29px;
+}
+.main-page__benefits-item:nth-child(2) img {
+  left: 6px;
+}
+.main-page__benefits-item:nth-child(3) img {
+  left: 0;
+}
+.main-page__benefits-item:nth-child(4) img {
+  left: 11px;
+}
+.main-page__benefits-item:nth-child(5) img {
+  left: 0;
+}
+.main-page__benefits-item img {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.main-page__geography {
+  height: 480px;
+  text-align: center;
+  background: #0f0f0f;
+  color: #ccc;
+}
+.main-page__geography .container {
+  padding: 33px 0;
+}
+.main-page__geography h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 28px;
+}
+.main-page__places {
+  height: 480px;
+  text-align: center;
+  background: #161616;
+  color: #ccc;
+}
+.main-page__places .container {
+  padding: 53px 0;
+}
+.main-page__places h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.main-page__places p {
+  font-size: 18px;
+  line-height: 21px;
+  padding-top: 28px;
+  font-weight: 300;
+}
+.main-page__places-list {
+  text-align: center;
+  line-height: 0;
+  font-size: 0;
+}
+.main-page__places-list img {
+  display: inline-block;
+  padding: 11px 64px;
+  vertical-align: middle;
+}
+.main-page__contacts {
+  background: url("../img/back-160C.png");
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #ccc;
+}
+.main-page__contacts .container {
+  padding: 158px 0;
+  line-height: 0;
+}
+.main-page__contacts h2 {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 35px;
+}
+.main-page__contacts p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+}

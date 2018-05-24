@@ -1,0 +1,119 @@
+extends /layout
+include /header
+
+block main
+  .main-page
+    +header("Мы производим для Вас лучшее!")
+    section.products-menu#products-menu
+      .products-menu__row
+        .products-menu__row-item
+          a(href="/semimanufactures.html")
+            img(src="img/products-menu/polufabrikati.png")
+            | ПОЛУФАБРИКАТЫ#[br]ИЗ МОРЕПРОДУКТОВ
+        .products-menu__row-item
+          a(href="/wild.html")
+            img(src="img/products-menu/dikaya.png")
+            | Дикая рыба#[br]ДАЛЬНЕГО ВОСТОКА
+        .products-menu__row-item
+          a(href="/ingredients.html")
+            img(src="img/products-menu/ingridienti.png")
+            | Ингредиенты#[br]для японской кухни
+      .products-menu__row
+        .products-menu__row-item
+          a(href="/catering.html")
+            img(src="img/products-menu/keitering.png")
+            | Продукты#[br]для кейтеринга
+        .products-menu__row-item
+          a(href="/delicacies.html")
+            img(src="img/products-menu/delikatesi.png")
+            | Рыбные#[br]деликатесы
+        .products-menu__row-item
+          a(href="/snacks.html")
+            img(src="img/products-menu/sneki.png")
+            | Снековая#[br]продукция
+        .products-menu__row-item
+          a(href="/children.html")
+            img(src="img/products-menu/detskoe.png")
+            | Детское#[br]питание
+    section.main-page__about#about
+      .container
+        h2 О компании Frozen Marr
+        p Российский производитель рыбных продуктов и полуфабрикатов.#[br]С первого года своей работы компания завоевала популярность у потребителей, благодаря производству качественной продукции из отборного сырья. 
+        p НАША РАБОТА - удачное сочетание технологий и творчества.#[br]Качественное сырье, высокотехнологичное производство и личная ответственность сотрудников - приоритетные составляющие работы ООО “Фроузен Марр”.
+        p НАША ПРОДУКЦИЯ - гарантированно высококачественный и востребованный товар.#[br]Цель нашей работы - производство конкурентноспособной продукции, наиболее полно удовлетворяющей ожидания потребителей и отвечающей законодательным требованиям в области безопасности выпускаемой продукции. 
+    section.main-page__people
+    section.main-page__production
+      .container
+        h2 Наше производство
+        p Производственные цеха ООО “Фроузен Мар” укомплектованы современным высокотехнологичным оборудованием. На регулярной основе компания проводит мониторинг инноваций, модернизацию и усовершенствование производства. 
+        .main-page__production-history
+          .main-page__production-history-line Запуск производства - 2015 
+          .main-page__production-history-line Работники компании - 90 человек 
+          .main-page__production-history-line 8 стран - поставщики сырья 
+          .main-page__production-history-line Площадь территории - 3405 кв. м
+    section.main-page__160C
+      .container
+        img(src="img/logo-160.png")
+        h2 “160
+          sup о
+          |  на Восток”
+        p ТМ "160
+          sup о
+          |  на Восток” - представляет собой коллекцию креативных продуктов, разработанных и произведенных на основе высококачественного российского сырья.
+        p Наши покупатели достойны приобретать за свои деньги натуральные, высококачественные, инновационные продукты отечественного производства по доступной цене. 
+        p 160
+          sup о
+          |  на Восток - свежий ветер Вашим парусам! 
+    section.main-page__promo
+      .container
+        img(src="img/promo.png")
+    section.main-page__benefits
+      .container
+        h2 Наши преимущества
+        .main-page__benefits-list
+          .main-page__benefits-item
+            img(src="img/benefits/tech.png")
+            | оригинальные технологические решения
+          .main-page__benefits-item
+            img(src="img/benefits/control.png")
+            | жесткий контроль качества#[br]на каждом этапе производства
+          .main-page__benefits-item
+            img(src="img/benefits/price.png")
+            | ​справедливая#[br]цена
+          .main-page__benefits-item
+            img(src="img/benefits/buyer.png")
+            | профессиональный подход к нашему покупателю
+          .main-page__benefits-item
+            img(src="img/benefits/delivery.png")
+            | стабильный#[br]поставщик для#[br]наших партнеров
+    section.main-page__geography#geography
+      .container
+        h2 Георгафия добычи
+        img(src="img/map.png")
+    section.main-page__places#places
+      .container
+        h2 Где купить
+        .main-page__places-list
+          img(src="img/places/yakitoria.png")
+          img(src="img/places/ashan.png")
+          img(src="img/places/azbuka.png")
+          img(src="img/places/tanuki.png")
+          img(src="img/places/rosinter.png")
+          img(src="img/places/magnit.png")
+          img(src="img/places/sushishop.png")
+          img(src="img/places/x5.png")
+          img(src="img/places/metro.png")
+          img(src="img/places/globus.png")
+          img(src="img/places/lenta.png")
+        p и многие другие
+    section.main-page__contacts#contacts
+      .container
+        h2 Контакты
+        p 141800, Россия, МО,
+        p г.Дмитров, ул.Внуковская, д.66
+        p info@frozenmar.com 
+        p Tel.: +7 (495) 777-21-77
+
+
+   
+  

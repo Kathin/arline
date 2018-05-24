@@ -1,0 +1,72 @@
+include /mixins
+include /input
+
+doctype html
+<!--[if lt IE 7]><html lang="ru" class="ie6 no-js" style="visibility: hidden;"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="ie7 no-js" style="visibility: hidden;"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="ie8 no-js" style="visibility: hidden;"><![endif]-->
+<!--[if IE 9]><html lang="ru" class="ie9 no-js" style="visibility: hidden;"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ru" class="no-js" style="visibility: hidden;"><!--<![endif]-->
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    script(src="js/vendor.js")
+    if env === 'dev'
+      link(rel="stylesheet", href="css/reset.css")
+      link(rel="stylesheet", href="css/layout.css")
+      link(rel="stylesheet", href="css/text.css")
+      each stylesheet in css
+        link(rel="stylesheet", href= stylesheet)
+    else
+      link(rel="stylesheet", href="css/style.min.css")
+    script(src="js/script.js")
+    title Frozenmarr
+  body
+    .wrapper
+      .topnav#topnav
+        .container
+          .topnav__logo
+            a(href="/")
+              img(src="img/logo.png")
+          .topnav__menu
+            .topnav__menu-item
+              a(href="/index.html#products-menu") Продукты
+              .topnav__menu-dropdown
+                a(href="/semimanufactures.html") ПОЛУФАБРИКАТЫ #[br] ИЗ МОРЕПРОДУКТОВ
+                a(href="/wild.html") Дикая рыба #[br] ДАЛЬНЕГО ВОСТОКА
+                a(href="/ingredients.html") Ингредиенты #[br] для японской кухни
+                a(href="/catering.html") Продукты #[br] для кейтеринга
+                a(href="/snacks.html") Снековая продукция
+                a(href="/delicacies.html") Рыбные деликатесы 
+                a(href="/children.html") Детское#[br]питание
+            .topnav__menu-item
+              a(href="/index.html#about") О компании
+            .topnav__menu-item
+              a(href="/index.html#geography") География добычи
+            .topnav__menu-item
+              a(href="/index.html#places") Где купить
+            .topnav__menu-item
+              a(href="/index.html#contacts") Контакты
+      .content
+        block main
+        .footer
+          .footer__menu
+            .container
+                .footer__menu-item
+                  a(href="/index.html#about") О компании
+                .footer__menu-item
+                  a(href="/index.html#products-menu") Продукты
+                .footer__menu-item
+                  a(href="/index.html#geography") География добычи
+                .footer__menu-item
+                  a(href="/index.html#places") Где купить
+                .footer__menu-item
+                  a(href="/index.html#contacts") Контакты
+          .footer__bottom
+            .container
+                .footer__about
+                  p © Компания Frozen Marr, 2017      
+                

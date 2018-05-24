@@ -1,0 +1,220 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+  font-weight bold
+   
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin 0 
+
+h1,
+.h1
+  letter-spacing -0.03em
+  // max-width 700px
+  +a($m)
+    font-size 36px
+    line-height 44px
+    margin 0 0 25px
+    padding-right 150px
+  +b($m)
+    font-size 20px
+    line-height 26px
+    margin 19px 0 18px
+    br
+      display none
+  span
+    font-weight 300
+    letter-spacing -1.12px  
+
+h2,
+.h2
+  font-size 30px
+  line-height 1.2em
+
+h3,
+.h3
+  +a($m)
+    font-size 24px
+    line-height 33px
+  +b($m)
+    font-size 18px
+    line-height 24px
+
+h4,
+.h4
+  line-height 27px
+  +a($d)
+    font-size 20px
+  +b($d)
+    font-size 18px
+
+h5,
+.h5
+  font-size 16px
+  text-transform uppercase
+  margin 47px 0 15px 
+
+h6,
+.h6
+  font-size 16px
+
+.text
+  &.-flow
+    margin 20px 0 
+  &.-indention-top
+    display block
+    padding-top 15px
+  p
+    line-height 19px
+    margin 8px 0 
+  h2,
+  h3,
+  h5,
+  h6
+    margin 2em 0 1em
+  h4
+    margin 26px 0 11px
+    +b($d)
+      line-height 22px
+  img
+    margin-bottom 8px
+    &[align="left"]
+      margin-right 25px
+    &[align="right"]
+      margin-left 25px
+  > div
+    margin-top 50px
+    margin-bottom 50px
+  hr
+    margin-top 25px
+    margin-bottom 25px
+  &__specs
+    +a($d)
+      margin 21px 0 56px
+    +b($d)
+      margin 17px 0 57px
+    dl
+      line-height 19px
+      margin-bottom 15px
+      +a($m)
+        padding 0
+        margin-top 0
+        margin-left 0
+        margin-right 0
+        font-size 0
+        position relative
+        &:after
+          content "" 
+          display block
+          position absolute
+          bottom 3px
+          left 0
+          width 100% 
+          height 1px
+          background-color rgba(#979797, 0.14) 
+          z-index 1
+      dt,
+      dd
+        font-size 14px
+        +a($m)
+          display inline-block
+          vertical-align bottom
+          margin 0
+          padding 0
+          span
+            background-color #fff 
+            position relative
+            z-index 2
+      dt
+        +a($d)
+          width 282px
+        +btw($m, $d)
+          width 69.1026%
+        +a($m)
+          font-weight bold
+      dd
+        +a($d)
+          width calc(100% - 282px)
+        +btw($m, $d)
+          width 30.8974%
+        span
+          +a($m)
+            display block
+            padding-left 1px
+  &__collapsed
+    &-content:not(.-above-m):not(.-below-m)
+      amh()
+    &-content.-above-m
+      +a($m)
+        amh()
+    &-content.-below-m
+      +b($m)
+        amh()
+    &-handler
+      display inline-block
+      vertical-align top
+      background-color $grayf3
+      border-radius 3px
+      padding 0 19px
+      text-transform uppercase
+      border none
+      cursor pointer
+      font-weight bold
+      padding-bottom 2px
+      transition color $speed 
+      +a($d)
+        margin-top 39px
+      &-value
+        display inline-block
+        vertical-align middle
+        &:before
+          content attr(data-closed)
+      &:hover
+        color $redf4 
+      &.-small 
+        font-size 11px
+        line-height 38px
+        height 40px
+        +b($d)
+          margin-top 15px 
+      &.-small &
+        &-dots
+          display inline-block
+          vertical-align middle
+          padding-right 8px
+          line-height 40px
+          i
+            display inline-block
+            vertical-align middle
+            width 4px
+            height 4px
+            border-radius 50%
+            background-color currentcolor
+            margin 0 1px 
+      &.-big
+        font-size 14px
+        line-height 42px
+        height 43px
+        +b($d)
+          margin-top 18px 
+        +b($m)
+          width 100% 
+    &.-active &-handler-value:before
+      content attr(data-opened)
+  > :first-child
+    margin-top 0 !important
+  > :last-child
+    margin-bottom 0 !important

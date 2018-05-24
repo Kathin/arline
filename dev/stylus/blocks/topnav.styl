@@ -1,0 +1,85 @@
+.topnav
+  display block !important
+  background url('../img/back-menu.png')
+  background-size cover
+  background-position center
+  color #cccccc
+  height 77px
+  a 
+    color #cccccc
+    &:hover
+      color #ffffff
+      text-decoration none
+  .container
+    position relative
+    height 77px
+    transition height $speed
+    &:after
+      content ""
+      display table
+      width 100%
+      font 0/0 'a'  
+  &__logo
+    float left
+    padding-top 22px
+    will-change width
+    position relative
+    overflow hidden
+    width 232px
+    transition-property padding, width
+    transition-duration $speed * 2
+    /*+b($t)
+      width 0  */    
+  &__menu
+    float right
+    height 77px
+    line-height 77px
+    transition-property float
+    transition-duration $speed * 2
+    /*+b($t)
+      float left*/
+    &-item
+      display inline-block
+      padding 9px 15px
+      vertical-align bottom
+      position relative
+      line-height 18px
+      font-size 16px
+      font-weight lighter
+      vertical-align bottom
+      &:last-child
+        padding-right 0
+      &:hover
+        font-weight normal 
+        letter-spacing -0.1px
+        color #ffffff
+        cursor pointer 
+        > .topnav__menu-dropdown
+          opacity 1
+          visibility visible
+    &-dropdown
+      display block
+      opacity 0
+      visibility hidden
+      position absolute
+      top 100%
+      width 160px
+      background #004278
+      z-index 222
+      left 50%
+      transform translateX(-50%)
+      text-align center
+      padding 5px 0
+      transition-property opacity, visibility
+      transition-duration $speed
+      /*+b($t)
+        left 0
+        transform none*/
+      a
+        display block
+        font-weight normal
+        line-height 14px
+        font-size 12px
+        padding 8px 17px
+        text-transform uppercase      
+    

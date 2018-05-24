@@ -1,0 +1,126 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.topnav {
+  display: block !important;
+  background: url("../img/back-menu.png");
+  background-size: cover;
+  background-position: center;
+  color: #ccc;
+  height: 77px;
+}
+.topnav a {
+  color: #ccc;
+}
+.topnav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.topnav .container {
+  position: relative;
+  height: 77px;
+  -webkit-transition: height 150ms;
+  transition: height 150ms;
+}
+.topnav .container:after {
+  content: "";
+  display: table;
+  width: 100%;
+  font: 0/0 'a';
+}
+.topnav__logo {
+  float: left;
+  padding-top: 22px;
+  will-change: width;
+  position: relative;
+  overflow: hidden;
+  width: 232px;
+  -webkit-transition-property: padding, width;
+  transition-property: padding, width;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+/*+b($t)
+      width 0  */
+}
+.topnav__menu {
+  float: right;
+  height: 77px;
+  line-height: 77px;
+  -webkit-transition-property: float;
+  transition-property: float;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+/*+b($t)
+      float left*/
+}
+.topnav__menu-item {
+  display: inline-block;
+  padding: 9px 15px;
+  vertical-align: bottom;
+  position: relative;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: lighter;
+  vertical-align: bottom;
+}
+.topnav__menu-item:last-child {
+  padding-right: 0;
+}
+.topnav__menu-item:hover {
+  font-weight: normal;
+  letter-spacing: -0.1px;
+  color: #fff;
+  cursor: pointer;
+}
+.topnav__menu-item:hover > .topnav__menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.topnav__menu-dropdown {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  width: 160px;
+  background: #004278;
+  z-index: 222;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  padding: 5px 0;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+/*+b($t)
+        left 0
+        transform none*/
+}
+.topnav__menu-dropdown a {
+  display: block;
+  font-weight: normal;
+  line-height: 14px;
+  font-size: 12px;
+  padding: 8px 17px;
+  text-transform: uppercase;
+}
