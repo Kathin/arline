@@ -6,14 +6,14 @@ doctype html
 <!--[if IE 7]><html lang="ru" class="ie7 no-js" style="visibility: hidden;"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="ie8 no-js" style="visibility: hidden;"><![endif]-->
 <!--[if IE 9]><html lang="ru" class="ie9 no-js" style="visibility: hidden;"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="ru" class="no-js" style="visibility: hidden;"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><html lang="ru" class="no-js" style="visibility: hidden;"><![endif]-->
   head
     meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=Edge")
     meta(name="keywords", content="")
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-    script(src="js/vendor.js")
+    script(src="js/vendor.js")    
     if env === 'dev'
       link(rel="stylesheet", href="css/reset.css")
       link(rel="stylesheet", href="css/layout.css")
@@ -23,48 +23,36 @@ doctype html
     else
       link(rel="stylesheet", href="css/style.min.css")
     script(src="js/script.js")
-    title Frozenmarr
+    title Кубок Мэра
   body
     .wrapper
       .topnav#topnav
         .container
-          .topnav__logo
-            a(href="/")
-              img(src="img/logo.png")
           .topnav__menu
             .topnav__menu-item
-              a(href="/index.html#products-menu") Продукты
-              .topnav__menu-dropdown
-                a(href="/semimanufactures.html") ПОЛУФАБРИКАТЫ #[br] ИЗ МОРЕПРОДУКТОВ
-                a(href="/wild.html") Дикая рыба #[br] ДАЛЬНЕГО ВОСТОКА
-                a(href="/ingredients.html") Ингредиенты #[br] для японской кухни
-                a(href="/catering.html") Продукты #[br] для кейтеринга
-                a(href="/snacks.html") Снековая продукция
-                a(href="/delicacies.html") Рыбные деликатесы 
-                a(href="/children.html") Детское#[br]питание
+              a(href="#") Главная              
             .topnav__menu-item
-              a(href="/index.html#about") О компании
+              a(href="#curators") Кураторы
             .topnav__menu-item
-              a(href="/index.html#geography") География добычи
+              a(href="#participants") Участники
             .topnav__menu-item
-              a(href="/index.html#places") Где купить
-            .topnav__menu-item
-              a(href="/index.html#contacts") Контакты
+              a(href="#info") Информация
       .content
         block main
         .footer
           .footer__menu
             .container
                 .footer__menu-item
-                  a(href="/index.html#about") О компании
+                  h2 О мероприятии                
+                  p Инфа
                 .footer__menu-item
-                  a(href="/index.html#products-menu") Продукты
+                  a(href="#") купить билет
                 .footer__menu-item
-                  a(href="/index.html#geography") География добычи
+                  a(href="#") Ссылка сайт 7 жизней
                 .footer__menu-item
-                  a(href="/index.html#places") Где купить
+                  a(href="#") Контакты
                 .footer__menu-item
-                  a(href="/index.html#contacts") Контакты
+                  a(href="mos.ru") mos.ru
           .footer__bottom
             .container
                 .footer__about
