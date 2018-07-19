@@ -55,7 +55,7 @@
 }
 html,
 body {
-  background-color: #0f0f0f;
+  background-color: #f9f2e7;
 }
 html {
   -ms-touch-action: manipulation;
@@ -183,7 +183,7 @@ html:after {
 }
 body {
   font: 14px/1.571429em "DINNextCYR", Arial, "PT Sans", sans-serif;
-  color: #fff;
+  color: #542a00;
 }
 button {
   font-family: "DINNextCYR", Arial, "PT Sans", sans-serif;

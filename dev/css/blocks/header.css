@@ -22,7 +22,7 @@
   display: block;
   position: relative;
   background: url("../img/back-header-main.png");
-  height: 405px;
+  height: 50px;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -37,6 +37,6 @@
   letter-spacing: 0.7px;
   text-transform: uppercase;
   background: rgba(0,0,0,0.29);
-  margin-top: 134px;
+  margin-top: 10px;
   font-weight: lighter;
 }
