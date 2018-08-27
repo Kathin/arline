@@ -18,44 +18,9 @@
             transform: rotate(360deg);
   }
 }
-@font-face {
-  font-family: 'DINNextCYR';
-  src: url("../fonts/DINNextCYR-Regular.eot");
-  src: url("../fonts/DINNextCYR-Regular.woff2") format('woff2'), url("../fonts/DINNextCYR-Regular.woff") format('woff'), url("../fonts/DINNextCYR-Regular.ttf") format('truetype'), url("../fonts/DINNextCYR-Regular.svg#DINNextCYR-Regular") format('svg'), url("../fonts/DINNextCYR-Regular.eot?#iefix") format('embedded-opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINNextCYR';
-  src: url("../fonts/DINNextCYR-Light.eot");
-  src: url("../fonts/DINNextCYR-Light.woff2") format('woff2'), url("../fonts/DINNextCYR-Light.woff") format('woff'), url("../fonts/DINNextCYR-Light.ttf") format('truetype'), url("../fonts/DINNextCYR-Light.svg#DINNextCYR-Light") format('svg'), url("../fonts/DINNextCYR-Light.eot?#iefix") format('embedded-opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINNextCYR';
-  src: url("../fonts/DINNextCYR-Bold.eot");
-  src: url("../fonts/DINNextCYR-Bold.woff2") format('woff2'), url("../fonts/DINNextCYR-Bold.woff") format('woff'), url("../fonts/DINNextCYR-Bold.ttf") format('truetype'), url("../fonts/DINNextCYR-Bold.svg#DINNextCYR-Bold") format('svg'), url("../fonts/DINNextCYR-Bold.eot?#iefix") format('embedded-opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'DINNextCYR';
-  src: url("../fonts/DINNextCYR-BoldItalic.eot");
-  src: url("../fonts/DINNextCYR-BoldItalic.woff2") format('woff2'), url("../fonts/DINNextCYR-BoldItalic.woff") format('woff'), url("../fonts/DINNextCYR-BoldItalic.ttf") format('truetype'), url("../fonts/DINNextCYR-BoldItalic.svg#DINNextCYR-BoldItalic") format('svg'), url("../fonts/DINNextCYR-BoldItalic.eot?#iefix") format('embedded-opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'DINNextCYR';
-  src: url("../fonts/DINNextCYR-Italic.eot");
-  src: url("../fonts/DINNextCYR-Italic.woff2") format('woff2'), url("../fonts/DINNextCYR-Italic.woff") format('woff'), url("../fonts/DINNextCYR-Italic.ttf") format('truetype'), url("../fonts/DINNextCYR-Italic.svg#DINNextCYR-Italic") format('svg'), url("../fonts/DINNextCYR-Italic.eot?#iefix") format('embedded-opentype');
-  font-weight: 400;
-  font-style: italic;
-}
 html,
 body {
-  background-color: #f9f2e7;
+  background-color: #fff;
 }
 html {
   -ms-touch-action: manipulation;
@@ -182,11 +147,11 @@ html:after {
   display: none !important;
 }
 body {
-  font: 14px/1.571429em "DINNextCYR", Arial, "PT Sans", sans-serif;
+  font: 14px/1.571429em "Roboto", Arial, sans-serif;
   color: #542a00;
 }
 button {
-  font-family: "DINNextCYR", Arial, "PT Sans", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 }
 svg {
   -webkit-transition-duration: 150ms;
@@ -236,11 +201,12 @@ a[href*="tel:"] {
   width: 100%;
   overflow: hidden;
   position: relative;
-  min-width: 980px;
+  min-width: 1366px;
+  padding: 0 20px;
 }
 .container {
   margin: auto;
-  max-width: 980px;
+  max-width: 1366px;
   position: relative;
   width: 100%;
 }

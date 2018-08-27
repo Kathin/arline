@@ -1,0 +1,49 @@
+.footer
+  color $black
+  position relative
+  a 
+    &:hover
+      text-decoration none
+  &__info
+    display inline-block
+    max-width 270px
+    p 
+      color $gray
+      font-size 16px
+      line-height 21px
+  &__logo
+    color $purple
+    font-size 31px
+    line-height 31px
+    font-weight bold
+    &:hover
+      opacity 0.7
+  &__contacts  
+    font-weight bold
+    font-size 18px
+    line-height 24px
+    margin-top 15px
+    a 
+      color $black 
+      &:hover
+        text-decoration none
+        color $purple
+    & + &
+      margin-top 0
+  &__menu
+    float right
+    min-width 630px
+    &-list
+      display block
+      text-align left
+      border-bottom 1px solid #dcdcdc
+      padding-bottom 21px
+      &-item
+        color $black
+        font-size 16px
+        line-height 41px
+        & + &
+          margin-left 45px
+    &-social
+      display block
+          

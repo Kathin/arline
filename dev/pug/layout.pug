@@ -14,6 +14,8 @@ doctype html
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
     script(src="js/vendor.js")    
+    noscript
+      link(href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext", rel="stylesheet")
     if env === 'dev'
       link(rel="stylesheet", href="css/reset.css")
       link(rel="stylesheet", href="css/layout.css")
@@ -23,16 +25,58 @@ doctype html
     else
       link(rel="stylesheet", href="css/style.min.css")
     script(src="js/script.js")
-    title Страницы Linkyou
+    title ARLine
   body
-    .wrapper      
+    .wrapper
+      .container
+        if ['index'].indexOf(pagename) === -1
+          .topnav 
+            a.topnav__logo(href="/") ARLine   
+            .topnav__list 
+              a.topnav__list-item(href="#") Конструктор
+              a.topnav__list-item(href="#") Особенности
+              a.topnav__list-item(href="#") Галерея
+              a.topnav__list-item(href="#") Поддержка
+              a.topnav__list-item.-enter(href="#") Войти
+              a.topnav__list-item.-translate 
+                .topnav__list-item-language.-active Ru
+                .topnav__list-item-language En
+        else
+          .topnav.-main 
+            a.topnav__logo(href="/") ARLine   
+            .topnav__list 
+              a.topnav__list-item(href="#") Конструктор
+              a.topnav__list-item(href="#") Особенности
+              a.topnav__list-item(href="#") Галерея
+              a.topnav__list-item(href="#") Поддержка
+              a.topnav__list-item.-enter(href="#") Войти
+              a.topnav__list-item.-translate 
+                .topnav__list-item-language.-active Ru
+                .topnav__list-item-language En
+
       .content
         block main
         .footer
-          .footer__menu
-            .container                
-          .footer__bottom
-            .container
-                .footer__about
+          .container
+            .footer__info   
+              a.footer__logo(href="/") ARLine
+              p Самый простой способ создания дополненной реальности   
+              .footer__contacts +1 123 456 78 90
+              .footer__contacts
+                a(href="mailto:hello@arline.io") hello@arline.io       
+            .footer__menu
+              .footer__menu-list
+                a.footer__menu-list-item(href="#") Конструктор
+                a.footer__menu-list-item(href="#") Особенности
+                a.footer__menu-list-item(href="#") Галерея
+                a.footer__menu-list-item(href="#") Поддержка
+              .footer__menu-social
+                a.footer__menu-social-item 
+                  img(src="")
+                a.footer__menu-social-item
+                  img(src="")
+                a.footer__menu-social-item
+                  img(src="")
+
                   
                 

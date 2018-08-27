@@ -20,7 +20,7 @@ app.get('/', function (req, res, next) {
   body += 'a:hover{color:LightSkyBlue;text-decoration:none;}';
   body += 'h1 i{font-weight:normal;font-size:18px;}';
   body += '</style>';
-  body += '<h1>klenmarket.ru <i>v2</i></h1>';
+  body += '<h1>arline</h1>';
 
   fs.readdir(path.join(__dirname, 'dev'), (err, files) => {
     files.forEach(file => {

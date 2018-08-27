@@ -1,14 +1,19 @@
 .topnav
   display block !important
-  background url('../img/back-menu.png')
   background-size cover
   background-position center
-  color #cccccc
+  color $black  
+  padding-top 35px
   height 77px
+  width 100%
+  position absolute
+  top 0
+  left 0
+  z-index 8
   a 
-    color #cccccc
+    color $black
     &:hover
-      color #ffffff
+      color $purple
       text-decoration none
   .container
     position relative
@@ -20,66 +25,51 @@
       width 100%
       font 0/0 'a'  
   &__logo
-    float left
-    padding-top 22px
+    display inline-block
     will-change width
     position relative
     overflow hidden
-    width 232px
-    transition-property padding, width
+    transition-property all
     transition-duration $speed * 2
-    /*+b($t)
-      width 0  */    
-  &__menu
-    float right
-    height 77px
-    line-height 77px
-    transition-property float
-    transition-duration $speed * 2
-    /*+b($t)
-      float left*/
+    font-size 31px
+    font-weight bold
+    color $purple
+    line-height 42px    
+    vertical-align baseline 
+    margin-top -3px   
+    &:hover 
+      opacity 0.7
+  &__list
+    float right  
+    line-height 0  
     &-item
       display inline-block
-      padding 9px 15px
-      vertical-align bottom
-      position relative
-      line-height 18px
+      line-height 42px
       font-size 16px
-      font-weight lighter
-      vertical-align bottom
-      &:last-child
-        padding-right 0
+      margin 0 22.5px
+      vertical-align baseline
+      &.-active
+        color $purple
+      &.-translate
+        display none
+      &-language
+        display none
+        &.-active 
+          display block
+      &.-enter
+        height 42px
+        border 1px solid #fff
+        border-radius 21px
+        padding 0 20px
+        box-sizing border-box
+  &.-main 
+    color #ffffff
+    a 
+      color #ffffff
       &:hover
-        font-weight normal 
-        letter-spacing -0.1px
-        color #ffffff
-        cursor pointer 
-        > .topnav__menu-dropdown
-          opacity 1
-          visibility visible
-    &-dropdown
-      display block
-      opacity 0
-      visibility hidden
-      position absolute
-      top 100%
-      width 160px
-      background #004278
-      z-index 222
-      left 50%
-      transform translateX(-50%)
-      text-align center
-      padding 5px 0
-      transition-property opacity, visibility
-      transition-duration $speed
-      /*+b($t)
-        left 0
-        transform none*/
-      a
-        display block
-        font-weight normal
-        line-height 14px
-        font-size 12px
-        padding 8px 17px
-        text-transform uppercase      
+        opacity 0.7
+    .topnav__logo
+      color $purple
+    
+       
     
