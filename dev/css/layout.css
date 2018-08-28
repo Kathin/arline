@@ -172,7 +172,7 @@ svg:not(.-no-restyle) [stroke] {
   stroke: currentcolor;
 }
 a {
-  color: #0169bf;
+  color: $blue;
   -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
   -webkit-transition-property: color;
@@ -215,13 +215,13 @@ hr {
   padding: 0;
   margin: 0;
   border: none;
-  background-color: #e5e5ed;
+  background-color: $bluee5;
   height: 1px;
 }
 hr.-bold {
   height: 6px;
   border-radius: 3px;
-  background-color: #3e3f55;
+  background-color: $blue3e;
 }
 @media only screen and (max-width: 767px) {
   hr.-bold {
@@ -315,7 +315,7 @@ img.-grayscale-hoverable:hover {
   white-space: nowrap;
 }
 .text-warning {
-  color: #f44519;
+  color: $redf4;
 }
 .js-tooltip {
   display: inline-block;

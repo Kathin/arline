@@ -3,8 +3,23 @@ include /header
 
 block main
   .main-page
-    +header("Страницы Linkyou")
-    .container
+    .preview
+      .container
+        .preview__left
+          .preview__subtitle НОВАЯ ПЛАТФОРМА РАСШИРЕННОЙ РЕАЛЬНОСТИ
+          .preview__title Создавайте удивительные вещи с ARLine
+          .preview__text Самый простой способ создания дополненной реальности
+          .preview__form
+            form
+              input.preview__form-input(type="email", name="email")
+              button.preview__form-button Зарегистрироваться
+        .preview__right
+          .preview__img
+            img(src="img/preview.png")
+
+
+
+
       
       
 
