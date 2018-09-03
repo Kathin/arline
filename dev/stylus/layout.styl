@@ -14,60 +14,7 @@ html
   +btw($m, $t)
     font-size (100 / 768)vw
   +b($m)
-    font-size (100 / 320)vw
-  &.has-menu
-    &,
-    body
-      // overflow hidden 
-    .topnav
-      transform translateX(0)
-    .topbar
-      position relative
-      +btw($m, $t)
-        margin-top 60px
-      +b($m)
-        margin-top 48px
-      +b($t)
-        &:before
-          content "" 
-          display block
-          position absolute
-          z-index 2
-          top 0
-          left 0
-          width 100% 
-          height 100% 
-          background-color rgba(#000, 0.6) 
-      ~ .header
-        +b($t)
-          position fixed
-    .locator
-      +b($t)
-        opacity 0
-        visibility hidden
-    .header
-      border-bottom-color transparent 
-      &__burger
-        i
-          &:nth-child(1)
-            transform rotate(45deg) translate(-1px, 0)
-          &:nth-child(2)
-            opacity 0
-          &:nth-child(3)
-            transform rotate(-45deg) translate(-1px, 0)
-    .topbar,
-    .content
-      +btw($m, $t)
-        transform translateX(384px)
-      +b($m)
-        transform translateX(286px)
-    .content
-      overflow hidden
-      +b($t)
-        margin-top 0
-      &__fader
-        opacity 1
-        visibility visible
+    font-size (100 / 320)vw  
   &.-dragged
     user-select none
     pointer-events none
@@ -77,7 +24,7 @@ html
 
 body
   font 14px/1.571429em "Roboto", Arial, sans-serif
-  color #542a00
+  color $black
   
 button
   font-family "Roboto", Arial, sans-serif
@@ -116,13 +63,12 @@ a
   width 100% 
   overflow hidden
   position relative
-  min-width 1366px
-  padding 0 20px
+  min-width 1406px
 .container
   margin auto
   max-width 1366px
   position relative
-  width 100%
+  width 100%  
     
 hr
   display block

@@ -77,7 +77,7 @@
   display: inline-block;
   line-height: 42px;
   font-size: 16px;
-  margin: 0 22.5px;
+  margin: 0 0 0 45px;
   vertical-align: baseline;
 }
 .topnav__list-item.-active {

@@ -1,7 +1,117 @@
 .main-page
-  background-image linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(243,240,254,1) 100%)
+  background-image linear-gradient(60deg, rgba(255,255,255,1) 21%, rgba(243,240,254,1) 100%)/*rgba(243,240,254,1)*/
   .preview
     padding-top 77px
     background-image url(../img/bg_top.png)
     background-repeat no-repeat
-    background-position 50% 0
+    background-position calc(50% + 401px) 0
+    font-size 0
+    &:after
+      content ''
+      width 100%
+      clear both
+      display block
+      float none
+      height 0px
+      position relative
+    &__left
+      padding-top 155px
+      display inline-block
+      vertical-align top 
+      width 42.5%
+      position relative
+      z-index 1
+    &__right
+      padding-top 95px
+      display inline-block
+      vertical-align top 
+      width 57.5%
+      position relative
+      z-index 1
+    &__subtitle
+      font-size 16px
+      font-weight bold
+      line-height 18px
+      text-transform uppercase
+      padding-bottom 35px
+      color $purple
+    &__title
+      font-size 45px
+      font-weight bold
+      line-height 55px
+      padding-bottom 15px
+      color $black
+    &__text
+      font-size 16px
+      line-height 18px
+      padding-bottom 50px
+      color $gray
+    &__img
+      float right
+      border-radius 24px
+      overflow hidden
+      line-height 0
+      background-color rgb(113, 54, 226)
+      box-shadow 0px 28px 64.68px 19.32px rgba(0, 0, 0, 0.27)
+    &__form
+      &-input
+        display inline-block
+        border 1px solid #dcdcdc
+        border-radius 27.5px
+        font-size 16px
+        line-height 16px
+        padding 20px 80px 19px 34px
+        width 380px
+        box-sizing border-box
+        height 55px
+        position relative
+        z-index 1
+        vertical-align top
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color #fff
+        z-index 2
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        margin-left -72px
+        background #6841f2
+        background linear-gradient(to right, rgba(104,65,242,1) 8%,rgba(104,65,242,1) 8%,rgba(113,54,226,1) 100%)
+        &:hover
+          background #6841f2
+    &__arrow
+      margin 43px auto 0
+      position relative
+      width 32px
+      height 55px
+      display block
+      transition all $speed
+      &:hover
+        opacity 0.8        
+      img 
+        width 100%
+        height 100%
+  .principles
+    padding-top 82px
+    &__title
+      margin-bottom 45px
+    &__list
+      font-size 0
+      line-height 0
+      &-item
+        width 25%
+        display inline-block
+        vertical-align top
+        padding-left 100px
+        box-sizing border-box
+        &:first-child
+          padding 0
+      
