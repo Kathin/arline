@@ -6,6 +6,7 @@
     background-repeat no-repeat
     background-position calc(50% + 401px) 0
     font-size 0
+    padding-bottom 82px
     &:after
       content ''
       width 100%
@@ -100,7 +101,6 @@
         width 100%
         height 100%
   .principles
-    padding-top 82px
     &__title
       margin-bottom 45px
     &__list
@@ -113,5 +113,26 @@
         padding-left 100px
         box-sizing border-box
         &:first-child
-          padding 0
+          padding 0          
+          width calc(25% - 49px)
+        &:nth-child(2)
+          width calc(25% + 34px)  
+        &:last-child
+          padding-left 89px
+          width calc(25% + 15px)                   
+        &-title 
+          font-size 18px
+          line-height 24px
+        &-img
+          width 96px
+          margin-bottom 24px
+          img 
+            width 100%
+        &-text
+          font-size 16px
+          line-height 24px
+          color #c0bfc5
+          margin-top 12px
+          
+          
       
