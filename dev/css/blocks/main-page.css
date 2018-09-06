@@ -184,3 +184,100 @@
   color: #c0bfc5;
   margin-top: 12px;
 }
+.main-page .using {
+  background: url("/img/tabs.png") no-repeat calc(50% - 476px) -7px;
+  padding-top: 145px;
+  min-height: 860px;
+}
+.main-page .using .container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 35.4%;
+}
+.main-page .using__title {
+  margin-bottom: 45px;
+}
+.main-page .using__tabs {
+  display: block;
+}
+.main-page .using__tabs-titles {
+  font-size: 0;
+  line-height: 0;
+  border-radius: 27.5px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 74px;
+  background: #fff;
+}
+.main-page .using__tabs-titles-item {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 55px;
+  height: 55px;
+  font-size: 16px;
+  color: #c0bfc5;
+  background: #fff;
+  padding: 0 24px;
+  border-radius: 27.5px;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+.main-page .using__tabs-titles-item:hover {
+  color: #6841f2;
+  cursor: pointer;
+}
+.main-page .using__tabs-titles-item.active {
+  color: #fff;
+  background: #6841f2;
+}
+.main-page .using__tabs-content-item {
+  display: none;
+  position: relative;
+}
+.main-page .using__tabs-content-item.active {
+  display: block;
+}
+.main-page .using__tabs-content-about-title {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+.main-page .using__tabs-content-about-text {
+  color: #c0bfc5;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 35px;
+  max-width: 620px;
+  position: relative;
+}
+.main-page .using__tabs-content-about-text:before {
+  content: '';
+  width: 1px;
+  background: #6841f2;
+  height: calc(100% - 8px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+.main-page .using__tabs-content-img {
+  position: absolute;
+  -webkit-box-shadow: 0px 19px 46px 0px rgba(0,0,0,0.23);
+          box-shadow: 0px 19px 46px 0px rgba(0,0,0,0.23);
+  overflow: hidden;
+  border-radius: 24px;
+  top: 105px;
+  left: -345px;
+}
+.main-page .using__tabs-content-arrow {
+  top: 247px;
+  position: absolute;
+  color: #c0bfc5;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 232px;
+  background: url("/img/arrow-tabs.png") no-repeat 0 10px;
+  height: 130px;
+}

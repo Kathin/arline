@@ -13,4 +13,19 @@ jQuery(document).ready(function($) {
             window.location.hash = hash;
         });
     });
+    $(".using__tabs-titles").on(
+        "click",
+        ".using__tabs-titles-item:not(.active)",
+        function() {
+            $(this)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+                .closest(".using__tabs")
+                .find(".using__tabs-content-item")
+                .removeClass("active")
+                .eq($(this).index())
+                .addClass("active");
+        }
+    );
 })
