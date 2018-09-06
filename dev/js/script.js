@@ -29,6 +29,21 @@ jQuery(document).ready(function($) {
                 .addClass("active");
         }
     );
+    $(".prices__tabs-titles").on(
+        "click",
+        ".prices__tabs-titles-item:not(.active)",
+        function() {
+            $(this)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+                .closest(".prices__tabs")
+                .find(".prices__tabs-content-item")
+                .removeClass("active")
+                .eq($(this).index())
+                .addClass("active");
+        }
+    );
     /*Динамика placeholder в форме*/
     $(function() {
         $("input, textarea").each(function() {
