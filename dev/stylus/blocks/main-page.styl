@@ -59,15 +59,15 @@
         display inline-block
         border 1px solid #dcdcdc
         border-radius 27.5px
-        font-size 16px
-        line-height 16px
         padding 20px 80px 19px 34px
         width 380px
         box-sizing border-box
         height 55px
         position relative
         z-index 1
-        vertical-align top
+        vertical-align top        
+        .input__placeholder
+          color $gray
       &-button
         vertical-align top
         display inline-block
@@ -134,12 +134,12 @@
           color #c0bfc5
           margin-top 12px
   .using
-    background url('/img/tabs.png') no-repeat calc(50% - 476px) -7px
+    background url('../img/tabs.png') no-repeat calc(50% - 476px) -7px
     padding-top 145px
     min-height 860px
     .container
       box-sizing border-box
-      padding-left 35.4%     
+      padding-left 628px    
     &__title
       margin-bottom 45px
     &__tabs
@@ -203,6 +203,8 @@
           border-radius 24px
           top 105px
           left -345px
+          font-size 0
+          line-height 0
         &-arrow
           top 247px
           position absolute
@@ -210,8 +212,91 @@
           font-size 16px
           line-height 24px
           padding-left 232px
-          background url('/img/arrow-tabs.png') no-repeat 0 10px
-          height 130px
+          background url('../img/arrow-tabs.png') no-repeat 0 10px
+          height 135px
+  .sphere
+    &__title
+      margin-bottom 18px
+    &__text
+      color $gray
+      font-size 16px
+      line-height 24px
+    &__list
+      padding-top 40px
+      font-size 0
+      line-height 0
+      &-item 
+        display inline-block
+        vertical-align top
+        text-decoration none
+        text-align center
+        border 1px solid #e8e8e8
+        background #fff
+        padding-top 78px
+        box-sizing border-box
+        width 31.8%        
+        height 415px
+        margin-left 2.3%
+        border-radius 24px
+        &:first-child
+          margin-left 0
+        &:hover
+          box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.19);
+        &-img
+          width 192px
+          display block
+          margin 0 auto
+          img 
+            width 100%
+        &-title
+          font-size 38px
+          line-height 38px
+          color $black
+        &-text 
+          font-size 16px
+          line-height 36px
+          color $gray
+  .registration
+    height 548px
+    background url('../img/regisback.png')
+    background-size 100% 100%
+    margin-top 43px
+    padding-top 153px
+    box-sizing border-box
+    color #fff
+    &__title
+      color #fff
+      line-height 55px
+    &__text
+      font-size 16px
+      line-height 45px
+    &__form
+      margin-top 40px
+      &-input
+        display inline-block
+        vertical-align top
+        border-radius 27.5px 
+        border 1px solid #fff
+        margin-right 30px
+        width 373px
+        input
+          color #fff
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+          
           
                  
       

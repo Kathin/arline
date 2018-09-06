@@ -89,8 +89,6 @@
   display: inline-block;
   border: 1px solid #dcdcdc;
   border-radius: 27.5px;
-  font-size: 16px;
-  line-height: 16px;
   padding: 20px 80px 19px 34px;
   width: 380px;
   -webkit-box-sizing: border-box;
@@ -99,6 +97,9 @@
   position: relative;
   z-index: 1;
   vertical-align: top;
+}
+.main-page .preview__form-input .input__placeholder {
+  color: #c0bfc5;
 }
 .main-page .preview__form-button {
   vertical-align: top;
@@ -185,14 +186,14 @@
   margin-top: 12px;
 }
 .main-page .using {
-  background: url("/img/tabs.png") no-repeat calc(50% - 476px) -7px;
+  background: url("../img/tabs.png") no-repeat calc(50% - 476px) -7px;
   padding-top: 145px;
   min-height: 860px;
 }
 .main-page .using .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 35.4%;
+  padding-left: 628px;
 }
 .main-page .using__title {
   margin-bottom: 45px;
@@ -270,6 +271,8 @@
   border-radius: 24px;
   top: 105px;
   left: -345px;
+  font-size: 0;
+  line-height: 0;
 }
 .main-page .using__tabs-content-arrow {
   top: 247px;
@@ -278,6 +281,108 @@
   font-size: 16px;
   line-height: 24px;
   padding-left: 232px;
-  background: url("/img/arrow-tabs.png") no-repeat 0 10px;
-  height: 130px;
+  background: url("../img/arrow-tabs.png") no-repeat 0 10px;
+  height: 135px;
+}
+.main-page .sphere__title {
+  margin-bottom: 18px;
+}
+.main-page .sphere__text {
+  color: #c0bfc5;
+  font-size: 16px;
+  line-height: 24px;
+}
+.main-page .sphere__list {
+  padding-top: 40px;
+  font-size: 0;
+  line-height: 0;
+}
+.main-page .sphere__list-item {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  padding-top: 78px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 31.8%;
+  height: 415px;
+  margin-left: 2.3%;
+  border-radius: 24px;
+}
+.main-page .sphere__list-item:first-child {
+  margin-left: 0;
+}
+.main-page .sphere__list-item:hover {
+  -webkit-box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
+          box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
+}
+.main-page .sphere__list-item-img {
+  width: 192px;
+  display: block;
+  margin: 0 auto;
+}
+.main-page .sphere__list-item-img img {
+  width: 100%;
+}
+.main-page .sphere__list-item-title {
+  font-size: 38px;
+  line-height: 38px;
+  color: #353a43;
+}
+.main-page .sphere__list-item-text {
+  font-size: 16px;
+  line-height: 36px;
+  color: #c0bfc5;
+}
+.main-page .registration {
+  height: 548px;
+  background: url("../img/regisback.png");
+  background-size: 100% 100%;
+  margin-top: 43px;
+  padding-top: 153px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+.main-page .registration__title {
+  color: #fff;
+  line-height: 55px;
+}
+.main-page .registration__text {
+  font-size: 16px;
+  line-height: 45px;
+}
+.main-page .registration__form {
+  margin-top: 40px;
+}
+.main-page .registration__form-input {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 27.5px;
+  border: 1px solid #fff;
+  margin-right: 30px;
+  width: 373px;
+}
+.main-page .registration__form-input input {
+  color: #fff;
+}
+.main-page .registration__form-button {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 27.5px;
+  position: relative;
+  font-size: 16px;
+  height: 55px;
+  line-height: 16px;
+  text-align: center;
+  padding: 20px 25px 19px;
+  color: #6841f2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  background: #fff;
 }

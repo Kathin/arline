@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
             window.location.hash = hash;
         });
     });
+    /*Табы*/
     $(".using__tabs-titles").on(
         "click",
         ".using__tabs-titles-item:not(.active)",
@@ -28,4 +29,72 @@ jQuery(document).ready(function($) {
                 .addClass("active");
         }
     );
+    /*Динамика placeholder в форме*/
+    $(function() {
+        $("input, textarea").each(function() {
+            if ($(this).val().length > 0)
+                $(this)
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .addClass("hidden");
+            else
+                $(this)
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden");
+            $(this).on("click", function(e) {
+                if ($(this).val().length > 0)
+                    $(this)
+                        .parent(".input")
+                        .removeClass(" -error")
+                        .find(".input__placeholder")
+                        .addClass("hidden");
+                else
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .removeClass("hidden");
+            });
+            $(".input__placeholder").on("click", function(e) {
+                $(this)
+                    .parent(".input")
+                    .find("input, textarea")
+                    .focus()
+                    .parent(".input")
+                    .removeClass(" -error");
+            });
+            $(this).focusout(function(e) {
+                if (
+                    $(this).val().length > 0 &&
+                    $(this).val() !== "+7 (___) ___ __ __"
+                ) {
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .addClass("hidden")
+                        .parent(".input")
+                        .removeClass(" -error");
+                    if (
+                        $(this)
+                            .parents(".form__field")
+                            .hasClass("-step2")
+                    ) {
+                        $(this)
+                            .parent(".input")
+                            .find(".input__placeholder")
+                            .css("opacity", "0");
+                    }
+                } else
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .removeClass("hidden")
+            });
+            $(this).focusin(function(e) {
+                $(this)
+                    .parent(".input")
+                    .removeClass(" -error");
+            });
+        });
+    });
 })
