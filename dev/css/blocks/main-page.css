@@ -233,6 +233,9 @@
   color: #fff;
   background: #6841f2;
 }
+.main-page .using__tabs-titles-item.active:hover {
+  color: #fff;
+}
 .main-page .using__tabs-content-item {
   display: none;
   position: relative;
@@ -321,6 +324,7 @@
 .main-page .sphere__list-item:hover {
   -webkit-box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
           box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
+  text-decoration: none;
 }
 .main-page .sphere__list-item-img {
   width: 192px;
@@ -389,6 +393,9 @@
           box-sizing: border-box;
   font-weight: 500;
   background: #fff;
+}
+.main-page .registration__form-button:hover {
+  text-decoration: none;
 }
 .main-page .features {
   font-size: 0;
@@ -513,6 +520,9 @@
   background-image: -webkit-gradient(linear, left top, right top, color-stop(8%, #6538d8), to(#7136e2));
   background-image: linear-gradient(to right, #6538d8 8%, #7136e2 100%);
 }
+.main-page .prices__tabs-titles-item.active:hover {
+  color: #fff;
+}
 .main-page .prices__tabs-content {
   margin-top: 45px;
 }
@@ -603,6 +613,7 @@
 .main-page .prices__tabs-content-block-button:hover {
   background: #6841f2;
   color: #fff;
+  text-decoration: none;
 }
 .main-page .summary {
   background: url("../img/form-back.png") no-repeat;

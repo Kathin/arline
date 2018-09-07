@@ -170,6 +170,8 @@
           &.active
             color #ffffff
             background $purple
+            &:hover
+              color #ffffff              
       &-content
         &-item
           display none
@@ -243,7 +245,8 @@
         &:first-child
           margin-left 0
         &:hover
-          box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.19);
+          box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+          text-decoration none
         &-img
           width 192px
           display block
@@ -298,6 +301,8 @@
         box-sizing border-box
         font-weight 500
         background #fff
+        &:hover
+          text-decoration none
   .features
     font-size 0
     line-height 0
@@ -396,6 +401,8 @@
             background-image -webkit-linear-gradient(left, #6538d8 8%,  #7136e2 100%)
             background-image -o-linear-gradient(left, #6538d8 8%, #7136e2 100%)
             background-image linear-gradient(to right, #6538d8 8%, #7136e2 100%)
+            &:hover
+              color #ffffff
       &-content
         margin-top 45px
         &-item
@@ -469,6 +476,7 @@
             &:hover
               background $purple
               color #fff
+              text-decoration none
   .summary
     background url('../img/form-back.png') no-repeat
     background-position 0 0
