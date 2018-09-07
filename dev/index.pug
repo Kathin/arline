@@ -10,8 +10,9 @@ block main
           h2.preview__title Создавайте удивительные вещи с ARLine
           .preview__text Самый простой способ создания дополненной реальности
           .preview__form
-            form
+            form(action="json/form-success.json")
               .input.preview__form-input
+                .input__error
                 input(type="email", name="email")
                 .input__placeholder Ваш E-mail
               button.preview__form-button Зарегистрироваться
@@ -111,11 +112,13 @@ block main
         h2.registration__title Зарегистрироваться #[br]в конструкторе
         .registration__text Создайте свою дополненную реальность!
         .registration__form
-          form
+          form(action="json/form-success.json")
             .input.registration__form-input
+              .input__error
               input(type="email", name="email")
               .input__placeholder Ваш E-mail
             .input.registration__form-input
+              .input__error
               input(type="password", name="password")
               .input__placeholder Пароль
             button.registration__form-button Зарегистрироваться
@@ -260,6 +263,49 @@ block main
                   img(src="img/ring.png")
                   | Поддержка 24/7
                 a.prices__tabs-content-block-button(href="") Попробовать сейчас
+    .summary
+      .container
+        .summary__form
+          h2.summary__form-title Нужно нестандартное решение? 
+          .summary__form-text Напишите нам, и мы воплотим любые ваши цифровые фантазии!
+          form(action="json/form-success.json")
+            .input.summary__form-input
+              .input__error
+              input(type="text", name="name")
+              .input__placeholder Ваше имя
+            .input.summary__form-input
+              .input__error
+              input(type="text", name="contact")
+              .input__placeholder Телефон или email
+            label.control-label__input
+              .control
+                .input__error
+                input(type="checkbox", name="conditions")
+                .control__box
+                  img(src="img/checkmark.svg")
+                .control__value
+                  span.control__value-text Я согласен 
+                    a(href="#") с условиями обработки #[br]персональных данных
+            button.summary__form-button Отправить
+        .summary__partners
+          h2.summary__partners-title Наши партнеры
+          .summary__partners-list
+            .summary__partners-list-item
+              img(src="img/shoptalk.png")
+            .summary__partners-list-item
+              img(src="img/propeller.png")
+            .summary__partners-list-item
+              img(src="img/microsoft.png")
+            .summary__partners-list-item
+              img(src="img/chief.png")
+            .summary__partners-list-item
+              img(src="img/techcrunch.png")
+            .summary__partners-list-item
+              img(src="img/dell.png")
+
+
+
+
 
 
 

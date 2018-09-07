@@ -101,6 +101,9 @@
 .main-page .preview__form-input .input__placeholder {
   color: #c0bfc5;
 }
+.main-page .preview__form-input input:-webkit-autofill {
+  -webkit-text-fill-color: #c0bfc5;
+}
 .main-page .preview__form-button {
   vertical-align: top;
   display: inline-block;
@@ -366,7 +369,8 @@
   margin-right: 30px;
   width: 373px;
 }
-.main-page .registration__form-input input {
+.main-page .registration__form-input input,
+.main-page .registration__form-input .input__error {
   color: #fff;
 }
 .main-page .registration__form-button {
@@ -389,6 +393,7 @@
 .main-page .features {
   font-size: 0;
   line-height: 0;
+  margin-bottom: 50px;
 }
 .main-page .features__title {
   padding: 42px 0 45px;
@@ -598,4 +603,83 @@
 .main-page .prices__tabs-content-block-button:hover {
   background: #6841f2;
   color: #fff;
+}
+.main-page .summary {
+  background: url("../img/form-back.png") no-repeat;
+  background-position: 0 0;
+  background-size: 48.5% 100%;
+  min-height: 734px;
+  padding-top: 156px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0;
+  margin-bottom: 66px;
+}
+.main-page .summary__form {
+  display: inline-block;
+  vertical-align: top;
+  width: 525px;
+}
+.main-page .summary__form-title {
+  color: #fff;
+}
+.main-page .summary__form-text {
+  font-size: 16px;
+  line-height: 45px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.main-page .summary__form form {
+  width: 373px;
+}
+.main-page .summary__form-input {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 27.5px;
+  border: 1px solid #fff;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.main-page .summary__form-input input,
+.main-page .summary__form-input .input__error,
+.main-page .summary__form-input .input__placeholder {
+  color: #fff;
+}
+.main-page .summary__form-button {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 27.5px;
+  position: relative;
+  font-size: 16px;
+  height: 55px;
+  line-height: 16px;
+  text-align: center;
+  padding: 20px 25px 19px;
+  color: #6841f2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  background: #fff;
+  width: 210px;
+  margin-top: 30px;
+}
+.main-page .summary__partners {
+  display: inline-block;
+  vertical-align: top;
+  width: 595px;
+  padding-left: 243px;
+}
+.main-page .summary__partners-title {
+  margin-bottom: 60px;
+}
+.main-page .summary__partners-list-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  height: 96px;
+  margin-left: 60px;
+}
+.main-page .summary__partners-list-item:nth-child(2n+1) {
+  margin-left: 0;
 }

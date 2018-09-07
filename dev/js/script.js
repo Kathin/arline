@@ -112,4 +112,212 @@ jQuery(document).ready(function($) {
             });
         });
     });
+    /*подписка*/
+    $(".preview__form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            email: ""
+        };
+
+        var require = ["name", "email"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                }
+            }
+        }
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            }).done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")               
+            });
+        }
+    });
+    $(".registration__form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            email: "",            
+            password: ""
+        };
+
+        var require = ["password", "email"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                }
+            }
+        }
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            }).done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
+            });
+        }
+    });
+    $(".summary__form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            name: "",            
+            contact: "",
+            conditions: $("[name=conditions]:checked").length,
+        };
+
+        var require = ["name", "contact"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                }
+            }
+        }
+        if (
+            !$(form)
+                .find("[name='conditions']")
+                .is(":checked")
+        ) {
+            errors.push(message);
+            $(form)
+                .find("[name='conditions']")
+                .parents(".control-label__input")
+                .addClass("-error")
+                .find(".input__error")
+                .html("Подтвердите условия");
+        } else
+            $(form)
+                .find("[name='conditions']")
+                .parents(".control-label__input")
+                .removeClass("-error");
+
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            }).done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
+                $(form).append(
+                    '<div class="input__error -connect">Спасибо! Мы с вами свяжемся!</div>'
+                );
+            });
+        }
+    });
 })

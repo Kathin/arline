@@ -68,6 +68,8 @@
         vertical-align top        
         .input__placeholder
           color $gray
+        input:-webkit-autofill
+          -webkit-text-fill-color $gray
       &-button
         vertical-align top
         display inline-block
@@ -279,8 +281,8 @@
         border 1px solid #fff
         margin-right 30px
         width 373px
-        input
-          color #fff
+        input, .input__error
+          color #fff 
       &-button
         vertical-align top
         display inline-block
@@ -299,6 +301,7 @@
   .features
     font-size 0
     line-height 0
+    margin-bottom 50px
     &__title
       padding 42px 0 45px
     &__list
@@ -466,6 +469,70 @@
             &:hover
               background $purple
               color #fff
+  .summary
+    background url('../img/form-back.png') no-repeat
+    background-position 0 0
+    background-size 48.5% 100%
+    min-height 734px
+    padding-top 156px
+    box-sizing border-box
+    font-size 0
+    margin-bottom 66px
+    &__form
+      display inline-block
+      vertical-align top
+      width 525px
+      &-title
+        color #fff
+      &-text
+        font-size 16px
+        line-height 45px
+        color #fff
+        margin-bottom 35px
+      form
+        width 373px
+      &-input
+        display inline-block
+        vertical-align top
+        border-radius 27.5px 
+        border 1px solid #fff
+        width 100%
+        margin-bottom 30px
+        input, .input__error, .input__placeholder
+          color #fff
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+        width 210px
+        margin-top 30px
+    &__partners
+      display inline-block
+      vertical-align top
+      width 595px
+      padding-left 243px
+      &-title 
+        margin-bottom 60px
+      &-list 
+        &-item 
+          display inline-block
+          vertical-align top
+          width 250px
+          height 96px
+          margin-left 60px 
+          &:nth-child(2n+1)
+            margin-left 0
 
       
           
