@@ -1,0 +1,68 @@
+.gallery
+  background-image linear-gradient(60deg, rgba(255,255,255,1) 21%, rgba(243,240,254,1) 100%)
+  padding-top 150px
+  &__list
+    font-size 0
+    line-height 0
+    &-item 
+      display inline-flex
+      position relative
+      vertical-align top
+      color #fff
+      overflow hidden
+      border-radius 10px
+      width 435px
+      height 435px
+      margin-left 30.5px
+      margin-bottom 30.5px
+      align-items flex-start
+      justify-content flex-end
+      flex-wrap nowrap
+      flex-direction column
+      padding 0 0 40px 42px
+      box-sizing border-box
+      transition all $speed
+      &:nth-child(3n+1)
+        margin-left 0
+      &:hover
+        box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+        text-decoration none
+        transform scale(1.04)
+      img 
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        margin 0 auto
+        left 0
+        right 0
+        display block  
+      &-subtitle
+        font-size 16px
+        line-height 18px
+        position relative
+      &-title 
+        font-size 24px
+        line-height 24px
+        margin-top 10px
+        font-weight bold
+        position relative
+  &__upload
+    border-radius 21px
+    box-shadow 0px 5px 21.87px 5.13px #e5e7ec
+    height 43px 
+    line-height 43px 
+    color $purple
+    background #fff
+    padding 0 30px
+    margin 10px auto
+    font-size 16px
+    display block
+    text-align center
+    cursor pointer
+    transition all $speed
+    &:hover
+      transform scale(1.04)
+
+
+          
+      

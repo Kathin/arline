@@ -51,9 +51,14 @@
   font-size: 31px;
   line-height: 31px;
   font-weight: bold;
+  margin-top: -24px;
+  width: 317px;
 }
 .footer__logo:hover {
   opacity: 0.7;
+}
+.footer__logo img {
+  width: 100%;
 }
 .footer__contacts {
   font-weight: bold;
@@ -74,6 +79,7 @@
 .footer__menu {
   float: right;
   min-width: 630px;
+  margin-top: 19px;
 }
 .footer__menu-list {
   display: block;

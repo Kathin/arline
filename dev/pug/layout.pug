@@ -30,7 +30,8 @@ doctype html
       .container
         if ['index'].indexOf(pagename) === -1
           .topnav 
-            a.topnav__logo(href="/") ARLine   
+            a.topnav__logo(href="/")
+              img(src="img/logo.png")
             .topnav__list 
               a.topnav__list-item(href="#") Конструктор
               a.topnav__list-item(href="#") Особенности
@@ -42,7 +43,8 @@ doctype html
                 .topnav__list-item-language En
         else
           .topnav.-main 
-            a.topnav__logo(href="/") ARLine   
+            a.topnav__logo(href="/")
+              img(src="img/logo.png") 
             .topnav__list 
               a.topnav__list-item(href="#") Конструктор
               a.topnav__list-item(href="#") Особенности
@@ -58,7 +60,8 @@ doctype html
         .footer
           .container
             .footer__info   
-              a.footer__logo(href="/") ARLine
+              a.footer__logo(href="/")
+                img(src="img/logo.png") 
               p Самый простой способ создания дополненной реальности   
               .footer__contacts +1 123 456 78 90
               .footer__contacts

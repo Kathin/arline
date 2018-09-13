@@ -1,0 +1,48 @@
+extends /layout
+include /header
+
+block main
+  .gallery
+    .container
+      .gallery__list      
+        a.gallery__list-item(href="#")
+          img(src="img/photo.png")
+          .gallery__list-item-subtitle Ris Ris
+          .gallery__list-item-title ChestBurster 
+        a.gallery__list-item(href="#")
+          img(src="img/photo.png")
+          .gallery__list-item-subtitle Ris Ris
+          .gallery__list-item-title ChestBurster 
+        a.gallery__list-item(href="#")
+          img(src="img/photo.png")
+          .gallery__list-item-subtitle Ris Ris
+          .gallery__list-item-title ChestBurster 
+        a.gallery__list-item(href="#")
+          img(src="img/photo.png")
+          .gallery__list-item-subtitle Ris Ris
+          .gallery__list-item-title ChestBurster 
+        a.gallery__list-item(href="#")
+          img(src="img/photo.png")
+          .gallery__list-item-subtitle Ris Ris
+          .gallery__list-item-title ChestBurster 
+      button.gallery__upload Больше проектов
+    .registration
+      .container
+        h2.registration__title Понравилась идея? #[br]Закажите у нас ее воплощение!
+        .registration__text Заполните форму, наш менеджер свяжется с Вами для обсуждения проекта.
+        .registration__form
+          form(action="json/form-success.json")
+            .input.registration__form-input
+              .input__error
+              input(type="email", name="email")
+              .input__placeholder Ваш E-mail
+            .input.registration__form-input
+              .input__error
+              input(type="password", name="password")
+              .input__placeholder Пароль
+            button.registration__form-button Зарегистрироваться
+    
+      
+
+
+  
