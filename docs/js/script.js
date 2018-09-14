@@ -49,26 +49,26 @@ jQuery(document).ready(function($) {
         $("input, textarea").each(function() {
             if ($(this).val().length > 0)
                 $(this)
-                    .parent(".input")
-                    .find(".input__placeholder")
-                    .addClass("hidden");
+                .parent(".input")
+                .find(".input__placeholder")
+                .addClass("hidden");
             else
                 $(this)
-                    .parent(".input")
-                    .find(".input__placeholder")
-                    .removeClass("hidden");
+                .parent(".input")
+                .find(".input__placeholder")
+                .removeClass("hidden");
             $(this).on("click", function(e) {
                 if ($(this).val().length > 0)
                     $(this)
-                        .parent(".input")
-                        .removeClass(" -error")
-                        .find(".input__placeholder")
-                        .addClass("hidden");
+                    .parent(".input")
+                    .removeClass(" -error")
+                    .find(".input__placeholder")
+                    .addClass("hidden");
                 else
                     $(this)
-                        .parent(".input")
-                        .find(".input__placeholder")
-                        .removeClass("hidden");
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden");
             });
             $(".input__placeholder").on("click", function(e) {
                 $(this)
@@ -91,8 +91,8 @@ jQuery(document).ready(function($) {
                         .removeClass(" -error");
                     if (
                         $(this)
-                            .parents(".form__field")
-                            .hasClass("-step2")
+                        .parents(".form__field")
+                        .hasClass("-step2")
                     ) {
                         $(this)
                             .parent(".input")
@@ -101,9 +101,9 @@ jQuery(document).ready(function($) {
                     }
                 } else
                     $(this)
-                        .parent(".input")
-                        .find(".input__placeholder")
-                        .removeClass("hidden")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
             });
             $(this).focusin(function(e) {
                 $(this)
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
                     .val("")
                     .parent(".input")
                     .find(".input__placeholder")
-                    .removeClass("hidden")               
+                    .removeClass("hidden")
             });
         }
     });
@@ -182,7 +182,7 @@ jQuery(document).ready(function($) {
         var form = $(this);
         var type = $(this).data("type");
         var fields = {
-            email: "",            
+            email: "",
             password: ""
         };
 
@@ -244,7 +244,7 @@ jQuery(document).ready(function($) {
         var form = $(this);
         var type = $(this).data("type");
         var fields = {
-            name: "",            
+            name: "",
             contact: "",
             conditions: $("[name=conditions]:checked").length,
         };
@@ -281,10 +281,9 @@ jQuery(document).ready(function($) {
                 }
             }
         }
-        if (
-            !$(form)
-                .find("[name='conditions']")
-                .is(":checked")
+        if (!$(form)
+            .find("[name='conditions']")
+            .is(":checked")
         ) {
             errors.push(message);
             $(form)
@@ -295,9 +294,9 @@ jQuery(document).ready(function($) {
                 .html("Подтвердите условия");
         } else
             $(form)
-                .find("[name='conditions']")
-                .parents(".control-label__input")
-                .removeClass("-error");
+            .find("[name='conditions']")
+            .parents(".control-label__input")
+            .removeClass("-error");
 
         if (!errors.length) {
             $.ajax({
@@ -320,4 +319,50 @@ jQuery(document).ready(function($) {
             });
         }
     });
+    /*подгрузка*/
+    $('.gallery__upload').click(function() {
+        $.ajax({
+            type: "get",
+            url: $('.gallery__upload').attr('data-resource'),
+            success: function(data) {
+                $('.gallery__list').append(data);
+            }
+        });
+    });  
+    /*модальные окна*/    
+    $('[data-modal]').click(function(e) {
+        e.preventDefault()
+        var src = $(this).attr('data-modal')
+        var href = this.href
+        var name = this.name || $(this).text();
+        var comment = $(this).attr('data-comment');
+        //le('forms', 'click', name) // начали отправлять
+
+        var data = {
+            'ajax': '1'
+        }
+        if ($(this).is('.buyoneclick') || $(this).is('.oneclick')) {
+            selected_count = parseInt($(this).parents('.order').find('input.count').val(), 10);
+        }
+        if ($(this).is('.lending')) {
+            tabs = $(this).attr('data-tabs');
+            price = $('div.' + tabs, this).text();
+        }
+        $.fancybox.showLoading()
+        $.ajax({
+                type: 'post',
+                url: src,
+                data: data
+            })
+            .done(function(data) {
+                var data = $(data)
+                $.fancybox.hideLoading()
+                $.fancybox(data)
+        })
+        .fail(function() {
+            $.fancybox.hideLoading()
+            alert('("' + src + '") окно не доступно,\nбудет выполнена переадресация')
+            window.location.href = href
+        })
+    })
 })

@@ -5,7 +5,7 @@ block main
   .gallery
     .container
       .gallery__list      
-        a.gallery__list-item(href="#")
+        a.gallery__list-item(data-modal="modal/modal.html")
           img(src="img/photo.png")
           .gallery__list-item-subtitle Ris Ris
           .gallery__list-item-title ChestBurster 
@@ -25,7 +25,7 @@ block main
           img(src="img/photo.png")
           .gallery__list-item-subtitle Ris Ris
           .gallery__list-item-title ChestBurster 
-      button.gallery__upload Больше проектов
+      button.gallery__upload(data-resource='js/page1.php') Больше проектов
     .registration
       .container
         h2.registration__title Понравилась идея? #[br]Закажите у нас ее воплощение!
