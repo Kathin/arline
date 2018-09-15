@@ -28,6 +28,7 @@ html {
   visibility: visible !important;
   opacity: 1 !important;
   -webkit-text-size-adjust: none;
+  overflow: overlay;
 }
 @media only screen and (min-width: 1336px) {
   html {

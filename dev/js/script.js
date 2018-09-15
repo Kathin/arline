@@ -338,6 +338,12 @@ jQuery(document).ready(function($) {
         $.arcticmodal({
             type: 'ajax',
             url: src,
+            overlay: {
+                css: {
+                    backgroundColor: '#353a43',
+                    opacity: .6
+                }
+            },
             afterLoading: function(data, el) {
                
             },
