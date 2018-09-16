@@ -1,18 +1,16 @@
-.registration
+.registration-page
   background-image linear-gradient(22deg, rgba(255,255,255,1) 21%, rgba(243,240,254,1) 100%)
-  padding-top 73px
+  padding-top 120px
   padding-bottom 60px
-  &-form
+  text-align center
+  &__form
     display inline-block
     vertical-align top
-    width 64.35%
-    background url("/img/form-support.png") no-repeat
-    min-height 585px
-    background-position 65px 0
-    padding-top 65px
-    padding-left 224px
+    background url("/img/form-support.png") no-repeat    
+    padding 65px 120px
     box-sizing border-box
-    background-size auto 100%
+    background-size 100% 100%
+    text-align left
     form         
       width 373px
       margin-top 26px
@@ -34,7 +32,10 @@
         margin-top 20px
       .input__error
         color #fff
-        bottom -19px          
+        bottom -19px 
+      & + .control-label__input 
+        margin-top 20px  
+        display block
     &-button
       vertical-align top
       display inline-block
@@ -58,5 +59,28 @@
         text-decoration none 
         color #fff 
         background transparent
-        border 1px solid #fff
+        border 1px solid #fff  
+    &-url
+      display block
+      color #fff  
+      font-size 14px
+      line-height 24px
+      margin-top 20px
+      padding-left 34px
+      font-style italic
+      opacity 0.6
+      text-align center
+      a 
+        color #fff        
+.autorization__form
+  display inline-block
+  vertical-align top
+  background url("/img/form-support.png") no-repeat    
+  padding 65px 120px
+  box-sizing border-box
+  background-size 100% 100%
+  text-align left
+  form         
+    width 373px
+    margin-top 26px
       

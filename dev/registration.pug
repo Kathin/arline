@@ -2,23 +2,60 @@ extends /layout
 include /header
 
 block main
-  .registration
+  .registration-page
     .container        
-      .registration__form
-        h4.registration__form-title Заявка на устранение проблемы
+      .registration-page__form
+        h4.registration-page__form-title Регистрация
         form(action="json/form-success.json")
-          .input.registration__form-input
+          .input.registration-page__form-input
             .input__error
             input(type="text", name="name")
             .input__placeholder Ваше имя
-          .input.registration__form-input
+          .input.registration-page__form-input
             .input__error
             input(type="email", name="email")
             .input__placeholder Ваш E-mail
-          .input.registration__form-input.-area
+          .input.registration-page__form-input
             .input__error
-            textarea(name="comment", rows="6")
-            .input__placeholder Опишите проблему
-          button.registration__form-button Отправить
+            input(type="password", name="password")
+            .input__placeholder Пароль
+          .input.registration-page__form-input
+            .input__error
+            input(type="password", name="repeat")
+            .input__placeholder Подтверждение пароля
+          label.control-label__input
+            .control
+              .input__error
+              input(type="checkbox", name="remember")
+              .control__box
+                img(src="img/checkmark.svg")
+              .control__value
+                span.control__value-text Запомнить меня
+          button.registration-page__form-button Зарегистрироваться
+          .registration-page__form-url
+            a(href="#") Не приходит письмо авторизационное письмо?
+      br
+      .autorization__form
+        h4.registration-page__form-title Авторизация
+        form(action="json/form-success.json")
+          .input.registration-page__form-input
+            .input__error
+            input(type="email", name="email")
+            .input__placeholder Ваш E-mail
+          .input.registration-page__form-input
+            .input__error
+            input(type="password", name="password")
+            .input__placeholder Пароль
+          label.control-label__input
+            .control
+              .input__error
+              input(type="checkbox", name="remember")
+              .control__box
+                img(src="img/checkmark.svg")
+              .control__value
+                span.control__value-text Запомнить меня
+          button.registration-page__form-button Войти
+          .registration-page__form-url
+            a(href="#") Забыли пароль?
 
   
