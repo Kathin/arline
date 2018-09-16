@@ -395,9 +395,15 @@
           box-sizing: border-box;
   font-weight: 500;
   background: #fff;
+  border: 1px solid #fff;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 .registration__form-button:hover {
   text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
 }
 .features {
   font-size: 0;
@@ -676,6 +682,15 @@
   background: #fff;
   width: 210px;
   margin-top: 30px;
+  border: 1px solid #fff;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+.summary__form-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
 }
 .summary__partners {
   display: inline-block;

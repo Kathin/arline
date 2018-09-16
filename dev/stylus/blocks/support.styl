@@ -1,0 +1,144 @@
+.support
+  background-image linear-gradient(22deg, rgba(255,255,255,1) 21%, rgba(243,240,254,1) 100%)
+  padding-top 73px
+  padding-bottom 60px
+  &__top
+    line-height 0
+    font-size 0
+    &-about
+      display inline-block
+      vertical-align top
+      width 35.65%
+      padding-top 57px
+      &-text
+        font-size 16px
+        line-height 24px
+        margin-top 12px
+        color $gray
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+        border 1px solid $purple
+        transition all $speed
+        margin-top 32px
+        &:hover
+          text-decoration none
+          color #fff 
+          background $purple
+    &-form
+      display inline-block
+      vertical-align top
+      width 64.35%
+      background url("/img/form-support.png") no-repeat
+      min-height 585px
+      background-position 65px 0
+      padding-top 65px
+      padding-left 224px
+      box-sizing border-box
+      background-size auto 100%
+      form         
+        width 373px
+        margin-top 26px
+      &-title
+        color #fff
+        font-size 23px 
+        line-height 55px 
+        font-weight bold
+      &-input
+        color #fff
+        border 1px solid #fff
+        input
+          color #fff 
+          &:-webkit-autofill
+            -webkit-text-fill-color #ffffff
+        textarea
+          color #fff 
+        & + &
+          margin-top 20px
+        .input__error
+          color #fff
+          bottom -19px          
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+        transition all $speed
+        border 1px solid #fff
+        width 210px
+        margin-top 20px
+        &:hover
+          text-decoration none 
+          color #fff 
+          background transparent
+          border 1px solid #fff
+  &__bottom
+    margin-top 10px
+  &__faq
+    margin-top 25px
+    &-item 
+      border-radius 11px
+      border 1px solid #dcdcdc
+      padding 25px 40px
+      cursor pointer
+      position relative
+      &:before
+        content ''
+        display block
+        position absolute
+        background url('/img/arrow.png') no-repeat
+        width 18px
+        height 10px
+        top 31px 
+        right 39px  
+        transform rotate(180deg) 
+        transition all $speed    
+      & + &
+        margin-top 10px
+      &.-active
+        &:before
+          content ''
+          transform rotate(0deg)   
+      &-title
+        font-size 24px 
+        line-height 24px
+        font-weight 500        
+      &-text 
+        font-size 18px 
+        line-height 30px
+        color $gray
+        padding-top 0
+        max-width 600px
+        padding-left 45px
+        height 0   
+        box-sizing border-box
+        overflow hidden  
+        transition all $speed
+        &.-active
+          height auto
+          padding-top 10px
+             
+        
+      

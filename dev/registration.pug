@@ -1,0 +1,24 @@
+extends /layout
+include /header
+
+block main
+  .registration
+    .container        
+      .registration__form
+        h4.registration__form-title Заявка на устранение проблемы
+        form(action="json/form-success.json")
+          .input.registration__form-input
+            .input__error
+            input(type="text", name="name")
+            .input__placeholder Ваше имя
+          .input.registration__form-input
+            .input__error
+            input(type="email", name="email")
+            .input__placeholder Ваш E-mail
+          .input.registration__form-input.-area
+            .input__error
+            textarea(name="comment", rows="6")
+            .input__placeholder Опишите проблему
+          button.registration__form-button Отправить
+
+  

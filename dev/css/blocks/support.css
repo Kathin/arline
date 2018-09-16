@@ -1,0 +1,199 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.support {
+  background-image: -webkit-linear-gradient(68deg, #fff 21%, #f3f0fe 100%);
+  background-image: linear-gradient(22deg, #fff 21%, #f3f0fe 100%);
+  padding-top: 73px;
+  padding-bottom: 60px;
+}
+.support__top {
+  line-height: 0;
+  font-size: 0;
+}
+.support__top-about {
+  display: inline-block;
+  vertical-align: top;
+  width: 35.65%;
+  padding-top: 57px;
+}
+.support__top-about-text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 12px;
+  color: #c0bfc5;
+}
+.support__top-about-button {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 27.5px;
+  position: relative;
+  font-size: 16px;
+  height: 55px;
+  line-height: 16px;
+  text-align: center;
+  padding: 20px 25px 19px;
+  color: #6841f2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #6841f2;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  margin-top: 32px;
+}
+.support__top-about-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #6841f2;
+}
+.support__top-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 64.35%;
+  background: url("/img/form-support.png") no-repeat;
+  min-height: 585px;
+  background-position: 65px 0;
+  padding-top: 65px;
+  padding-left: 224px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: auto 100%;
+}
+.support__top-form form {
+  width: 373px;
+  margin-top: 26px;
+}
+.support__top-form-title {
+  color: #fff;
+  font-size: 23px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.support__top-form-input {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.support__top-form-input input {
+  color: #fff;
+}
+.support__top-form-input input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+}
+.support__top-form-input textarea {
+  color: #fff;
+}
+.support__top-form-input + .support__top-form-input {
+  margin-top: 20px;
+}
+.support__top-form-input .input__error {
+  color: #fff;
+  bottom: -19px;
+}
+.support__top-form-button {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 27.5px;
+  position: relative;
+  font-size: 16px;
+  height: 55px;
+  line-height: 16px;
+  text-align: center;
+  padding: 20px 25px 19px;
+  color: #6841f2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 500;
+  background: #fff;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  border: 1px solid #fff;
+  width: 210px;
+  margin-top: 20px;
+}
+.support__top-form-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+}
+.support__bottom {
+  margin-top: 10px;
+}
+.support__faq {
+  margin-top: 25px;
+}
+.support__faq-item {
+  border-radius: 11px;
+  border: 1px solid #dcdcdc;
+  padding: 25px 40px;
+  cursor: pointer;
+  position: relative;
+}
+.support__faq-item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("/img/arrow.png") no-repeat;
+  width: 18px;
+  height: 10px;
+  top: 31px;
+  right: 39px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+.support__faq-item + .support__faq-item {
+  margin-top: 10px;
+}
+.support__faq-item.-active:before {
+  content: '';
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.support__faq-item-title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.support__faq-item-text {
+  font-size: 18px;
+  line-height: 30px;
+  color: #c0bfc5;
+  padding-top: 0;
+  max-width: 600px;
+  padding-left: 45px;
+  height: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+.support__faq-item-text.-active {
+  height: auto;
+  padding-top: 10px;
+}

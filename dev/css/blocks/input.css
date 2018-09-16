@@ -28,13 +28,15 @@
   transition: border-color 150ms;
   background: none;
   box-sizing: border-box;
-  padding: 19px 34px;
-  height: 55px;
+  padding: 18px 34px;
   font-size: 0;
   line-height: 0;
 }
 .input.-error .input__error {
   display: block;
+}
+.input.-area {
+  border-radius: 11px;
 }
 .input__placeholder {
   position: absolute;
@@ -74,6 +76,36 @@
   color: #fff;
 }
 .input input.purple:-webkit-autofill {
+  -webkit-text-fill-color: #6841f2;
+}
+.input textarea {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  font-size: 16px;
+  line-height: 17px;
+  background: none;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Roboto", Arial, sans-serif;
+}
+.input textarea::-ms-clear {
+  display: none;
+}
+.input textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: none;
+}
+.input textarea:focus ~ .input__placeholder {
+  display: none;
+}
+.input textarea.purple {
+  color: #fff;
+}
+.input textarea.purple:-webkit-autofill {
   -webkit-text-fill-color: #6841f2;
 }
 .input__error {

@@ -6,13 +6,14 @@
   transition border-color $speed
   background none
   box-sizing border-box
-  padding 19px 34px
-  height 55px
+  padding 18px 34px
   font-size 0
   line-height 0
   &.-error
     .input__error
       display block
+  &.-area
+    border-radius 11px
   &__placeholder
     position absolute
     top 0
@@ -31,6 +32,30 @@
     height 17px
     background none
     width 100%
+    &::-ms-clear
+      display none 
+    &:-webkit-autofill
+      -webkit-text-fill-color #ffffff
+      -webkit-box-shadow 0 0 0px 1000px transparent inset
+      transition background-color 5000s ease-in-out 0s 
+      background none  
+    &:focus
+      ~ .input__placeholder
+        display none
+    &.purple
+      color #fff
+      &:-webkit-autofill  
+        -webkit-text-fill-color $purple
+  textarea
+    border none
+    outline none
+    -webkit-appearance none
+    font-size 16px
+    line-height 17px    
+    background none
+    width 100%
+    overflow hidden
+    font-family "Roboto", Arial, sans-serif
     &::-ms-clear
       display none 
     &:-webkit-autofill

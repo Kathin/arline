@@ -1,0 +1,63 @@
+extends /layout
+include /header
+
+block main
+  .support
+    .support__top
+      .container
+        .support__top-about
+          h2.support__top-about-title Возникла проблема #[br]с конструктором? 
+          .support__top-about-text
+            | Здесь должна быть форма обратной связи, через которую можно было бы отправить емейлЗдесь должна быть форма обратной связи, через которую можно было бы отправить  емейл Здесь должна быть форма обратной связи, через которую можно было бы отправить емейл.
+          a.support__top-about-button(href="#") Как пользоваться конструктором
+        .support__top-form
+          h4.support__top-form-title Заявка на устранение проблемы
+          form(action="json/form-success.json")
+            .input.support__top-form-input
+              .input__error
+              input(type="text", name="name")
+              .input__placeholder Ваше имя
+            .input.support__top-form-input
+              .input__error
+              input(type="email", name="email")
+              .input__placeholder Ваш E-mail
+            .input.support__top-form-input.-area
+              .input__error
+              textarea(name="comment", rows="6")
+              .input__placeholder Опишите проблему
+            button.support__top-form-button Отправить
+    .support__bottom
+      .container
+        h2.support__bottom-title FAQ
+        .support__faq
+          .support__faq-item
+            .support__faq-item-title Что такое дополненная реальность?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Какие изображения можно использовать?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Какой контент можно использовать?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Сколько это стоит?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Как долго хранится контент?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Как это поможет моему бизнесу?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+          .support__faq-item
+            .support__faq-item-title Какие есть ограничения?
+            .support__faq-item-text Это результат введения в поле восприятия любых сенсорных данных  с целью дополнения сведений об окружении и улучшения восприятия информации.
+
+
+
+
+
+
+        
+
+
+  
