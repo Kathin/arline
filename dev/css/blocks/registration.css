@@ -28,7 +28,7 @@
 .registration-page__form {
   display: inline-block;
   vertical-align: top;
-  background: url("/img/form-support.png") no-repeat;
+  background: url("../img/form-support.png") no-repeat;
   padding: 65px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -114,7 +114,7 @@
 .autorization__form {
   display: inline-block;
   vertical-align: top;
-  background: url("/img/form-support.png") no-repeat;
+  background: url("../img/form-support.png") no-repeat;
   padding: 65px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

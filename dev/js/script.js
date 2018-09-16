@@ -172,12 +172,12 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -242,12 +242,12 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -331,13 +331,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -404,13 +404,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ваша заявка успешно отправлена</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ваша заявка успешно отправлена</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -491,13 +491,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -564,13 +564,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
