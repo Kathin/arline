@@ -84,6 +84,8 @@
   font-size: 16px;
   margin: 0 0 0 45px;
   vertical-align: baseline;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 .topnav__list-item.-active {
   color: #6841f2;
@@ -99,14 +101,16 @@
 }
 .topnav__list-item.-enter {
   height: 42px;
-  border: 1px solid #353a43;
+  border: 1px solid #6841f2;
   border-radius: 21px;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #6841f2;
 }
 .topnav__list-item.-enter:hover {
-  border-color: #6841f2;
+  background: #6841f2;
+  color: #fff;
 }
 .topnav.-main {
   color: #fff;
@@ -120,6 +124,13 @@
 }
 .topnav.-main a.topnav__list-item.-enter {
   border: 1px solid #fff;
+  color: #fff;
+}
+.topnav.-main a.topnav__list-item.-enter:hover {
+  opacity: 1;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #6841f2;
 }
 .topnav.-main .topnav__logo {
   color: #6841f2;
