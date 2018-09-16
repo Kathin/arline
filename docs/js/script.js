@@ -171,7 +171,15 @@ jQuery(document).ready(function($) {
                     .parent(".input")
                     .find(".input__placeholder")
                     .removeClass("hidden")
-            });
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
         }
     });
     $(".registration__form form").on("submit", function(e) {
@@ -233,7 +241,15 @@ jQuery(document).ready(function($) {
                     .parent(".input")
                     .find(".input__placeholder")
                     .removeClass("hidden")
-            });
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
         }
     });
     $(".summary__form form").on("submit", function(e) {
@@ -306,17 +322,257 @@ jQuery(document).ready(function($) {
                 cache: false,
                 url: src,
                 data: data_field
-            }).done(function(data) {
+            })
+            .done(function(data) {
                 $(form)
                     .find("input")
                     .val("")
                     .parent(".input")
                     .find(".input__placeholder")
                     .removeClass("hidden")
-                $(form).append(
-                    '<div class="input__error -connect">Спасибо! Мы с вами свяжемся!</div>'
-                );
-            });
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
+        }
+    });
+     $(".support__top-form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            name: "",
+            email: "",
+            comment: ""
+        };
+
+        var require = ["name", "email", "comment"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                }
+            }
+        }
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            })
+            .done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ваша заявка успешно отправлена</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
+        }
+    });
+    $(".registration-page__form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            name: "",
+            remember: $("[name=remember]:checked").length,
+            email: "",
+            password: "",
+            repeat: ""
+        };
+
+        var require = ["name", "email", "password", "repeat"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                } else {
+                    if (field == "repeat") {
+                        if (!(fields[field] == fields["password"])) {
+                            errors.push(message);
+                            $(form)
+                                .find("[name='" + field + "']")
+                                .parent(".input")
+                                .addClass("-error")
+                                .find(".input__error")
+                                .html("Пароли не совпадают");
+                        }
+                    }
+                }
+            }
+        }
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            })
+            .done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
+        }
+    });
+    $(".autorization__form form").on("submit", function(e) {
+        e.preventDefault();
+        var src = $(this).attr("action");
+        var serialize = $(this).serialize();
+        var data_field = $(this).serializeArray();
+        var form = $(this);
+        var type = $(this).data("type");
+        var fields = {
+            remember: $("[name=remember]:checked").length,
+            email: "",
+            password: ""
+        };
+
+        var require = ["email", "password"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        for (var field in fields) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            fields[field] = $.trim(val);
+            if (fields[field] == "" && require.indexOf(field) != -1) {
+                errors.push(message);
+                $(form)
+                    .find("[name='" + field + "']")
+                    .parent(".input")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html(message);
+            } else {
+                if (field == "email") {
+                    if (!expr.test(fields[field])) {
+                        errors.push(message);
+                        $(form)
+                            .find("[name='" + field + "']")
+                            .parent(".input")
+                            .addClass("-error")
+                            .find(".input__error")
+                            .html("введите корректный e-mail");
+                    }
+                } 
+            }
+        }
+        if (!errors.length) {
+            $.ajax({
+                type: "post",
+                async: false,
+                dataType: "json",
+                cache: false,
+                url: src,
+                data: data_field
+            })
+            .done(function(data) {
+                $(form)
+                    .find("input")
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("hidden")
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="/img/ok.png" align="center" alt="ok" /></div></div>'
+                });
+
+            })
+            .fail(function(data) {
+                $.arcticmodal({
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="/img/error.png" align="center" alt="ok" /></div></div>'
+                });
+            })
         }
     });
     /*подгрузка*/
@@ -329,40 +585,47 @@ jQuery(document).ready(function($) {
             }
         });
     });  
-    /*модальные окна*/    
-    $('[data-modal]').click(function(e) {
-        e.preventDefault()
-        var src = $(this).attr('data-modal')
-        var href = this.href
-        var name = this.name || $(this).text();
-        var comment = $(this).attr('data-comment');
-        //le('forms', 'click', name) // начали отправлять
+    /*модальные окна*/  
 
-        var data = {
-            'ajax': '1'
+    $("[data-modal]").on('click', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation;
+        var src = $(this).attr('data-modal')
+        $.arcticmodal({
+            type: 'ajax',
+            url: src,
+            overlay: {
+                css: {
+                    backgroundColor: '#353a43',
+                    opacity: .6
+                }
+            },
+            afterLoading: function(data, el) {
+               
+            },
+            afterLoadingOnShow: function(data, el) {
+                
+            }
+        });
+    });
+    /* Сворачивание инфы*/
+    $(".support__faq-item").each(function() {
+        var target = "";
+        target = $(".support__faq-item-text", $(this));
+
+        if ($(this).hasClass("-active")) {
+            $(target).addClass("-active");
+        } else {
+            $(target).removeClass("-active");
         }
-        if ($(this).is('.buyoneclick') || $(this).is('.oneclick')) {
-            selected_count = parseInt($(this).parents('.order').find('input.count').val(), 10);
-        }
-        if ($(this).is('.lending')) {
-            tabs = $(this).attr('data-tabs');
-            price = $('div.' + tabs, this).text();
-        }
-        $.fancybox.showLoading()
-        $.ajax({
-                type: 'post',
-                url: src,
-                data: data
-            })
-            .done(function(data) {
-                var data = $(data)
-                $.fancybox.hideLoading()
-                $.fancybox(data)
-        })
-        .fail(function() {
-            $.fancybox.hideLoading()
-            alert('("' + src + '") окно не доступно,\nбудет выполнена переадресация')
-            window.location.href = href
-        })
-    })
+        $(this).on("click", function(e) {
+            if ($(this).hasClass("-active")) {
+                $(this).removeClass("-active");
+                $(target).removeClass("-active");
+            } else {
+                $(this).addClass("-active");
+                $(target).addClass("-active");
+            }
+        });
+    });
 })
