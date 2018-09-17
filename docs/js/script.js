@@ -1,5 +1,30 @@
 document.documentElement.classList.add(isMobile.any ? 'mobile' : 'no-mobile');
 jQuery(document).ready(function($) {
+    (function () {
+      document.documentElement.className = document.documentElement.className.replace('no-js', '')
+
+      // First, let's merge real config with default values...
+
+      let defaults = {
+        path: '../',
+      }
+
+      if (!window.ENV) {
+        window.ENV = defaults
+      } else {
+        let result = {}
+
+        // Т.к. Object.assign не делает "глубокий" мерж,
+        // сначала получаем общий список всех ключей из двух конфигов,
+        // затем мержим их содержимое по отдельности
+
+        Object.keys(Object.assign({}, defaults, window.ENV)).forEach(key => {
+          result[key] = Object.assign({}, defaults[key], window.ENV[key])
+        })
+
+        window.ENV = result
+      }
+    })()
     /*Плавная прокрутка*/
     $('a[href^="#"]').on('click', function(e) {
         //e.preventDefault();
@@ -112,6 +137,22 @@ jQuery(document).ready(function($) {
             });
         });
     });
+    /*форма регистрации на главной дизактивация*/
+    $(function() {
+        $("input[name='conditions']").each(function() {
+            if ($(this).is(":checked"))
+              $(this).parents("form").find(".summary__form-button").removeClass("-disable")  
+            else
+              $(this).parents("form").find(".summary__form-button").addClass("-disable") 
+              
+            $(this).on("click", function(e) {
+                if ($(this).is(":checked"))
+                  $(this).parents("form").find(".summary__form-button").removeClass("-disable")  
+                else
+                  $(this).parents("form").find(".summary__form-button").addClass("-disable") 
+            })
+        })
+    })
     /*подписка*/
     $(".preview__form form").on("submit", function(e) {
         e.preventDefault();
@@ -172,12 +213,12 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -242,12 +283,12 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -268,7 +309,6 @@ jQuery(document).ready(function($) {
         var require = ["name", "contact"];
         var errors = [];
         var message = "Поле является обязательным для заполнения";
-        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         for (var field in fields) {
             var val = $(form)
@@ -331,13 +371,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -404,13 +444,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ваша заявка успешно отправлена</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ваша заявка успешно отправлена</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -491,13 +531,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -564,13 +604,13 @@ jQuery(document).ready(function($) {
                     .find(".input__placeholder")
                     .removeClass("hidden")
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="img/ok.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Данные успешно отправлены</p><img src="' + window.ENV.path +'img/ok.png" align="center" alt="ok" /></div></div>'
                 });
 
             })
             .fail(function(data) {
                 $.arcticmodal({
-                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="img/error.png" align="center" alt="ok" /></div></div>'
+                   content: '<div class="box-modal modal"><div class="modal__close arcticmodal-close"></div><div class="modal__message"><p>Ошибка отправки данных</p><img src="' + window.ENV.path +'img/error.png" align="center" alt="ok" /></div></div>'
                 });
             })
         }
@@ -589,31 +629,55 @@ jQuery(document).ready(function($) {
                     $('.gallery__upload').hide();
                 }
             }
-        });
+        })      
     });  
     /*модальные окна*/  
-
-    $("[data-modal]").on('click', function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation;
-        var src = $(this).attr('data-modal')
-        $.arcticmodal({
-            type: 'ajax',
-            url: src,
-            overlay: {
-                css: {
-                    backgroundColor: '#353a43',
-                    opacity: .6
+    /*статичная функция*/
+    function Modal(r) {
+        $("[data-modal]").on('click', function(e){
+            e.preventDefault();
+            e.stopImmediatePropagation;
+            var src = $(this).attr('data-modal')
+            $.arcticmodal({
+                type: 'ajax',
+                url: src,
+                overlay: {
+                    css: {
+                        backgroundColor: '#353a43',
+                        opacity: .6
+                    }
+                },
+                afterLoading: function(data, el) {              
+                },
+                afterLoadingOnShow: function(data, el) {
+                    
                 }
-            },
-            afterLoading: function(data, el) {
-               
-            },
-            afterLoadingOnShow: function(data, el) {
-                
-            }
+            });
         });
-    });
+    }
+    /*динамичная функция*/
+    $(".gallery__list").on('click', function(e){
+            e.preventDefault();
+            e.stopImmediatePropagation;
+            var target = e.target;
+            while (target != this) {
+                if (target.hasAttribute('data-modal')){
+                    var src = target.getAttribute('data-modal')
+                    $.arcticmodal({
+                        type: 'ajax',
+                        url: src,
+                        overlay: {
+                            css: {
+                                backgroundColor: '#353a43',
+                                opacity: .6
+                            }
+                        }
+                    }); 
+                }
+                target = target.parentNode;
+            }
+
+    })
     /* Сворачивание инфы*/
     $(".support__faq-item").each(function() {
         var target = "";
@@ -634,4 +698,18 @@ jQuery(document).ready(function($) {
             }
         });
     });
+    window.onload = function() {
+        var modal = window.location.href
+        if (modal.indexOf('?') + 1)
+            $.arcticmodal({
+                type: 'ajax',
+                url: modal,
+                overlay: {
+                    css: {
+                        backgroundColor: '#353a43',
+                        opacity: .6
+                    }
+                }
+            });
+    }
 })
