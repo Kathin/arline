@@ -1202,16 +1202,13 @@ html.no-mobile .using__tabs-titles-item.active:hover {
   height: 415px;
   margin-left: 2.3%;
   border-radius: 24px;
+  /*html.no-mobile &:hover
+        box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+        text-decoration none*/
 }
 
 .sphere__list-item:first-child {
   margin-left: 0;
-}
-
-html.no-mobile .sphere__list-item:hover {
-  -webkit-box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
-  box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.19);
-  text-decoration: none;
 }
 
 .sphere__list-item-img {
