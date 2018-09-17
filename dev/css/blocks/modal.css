@@ -141,8 +141,8 @@
   width: 100%;
   background: #e5e7ec;
   height: 67px;
-  line-height: 67px;
-  font-size: 16px;
+  line-height: 0;
+  font-size: 0;
   text-align: center;
 }
 .modal__content-make-title {
@@ -150,6 +150,8 @@
   display: inline-block;
   vertical-align: top;
   width: 416px;
+  line-height: 67px;
+  font-size: 16px;
 }
 .modal__content-make-button {
   color: #fff;
@@ -157,6 +159,8 @@
   display: inline-block;
   vertical-align: top;
   width: 112px;
+  line-height: 67px;
+  font-size: 16px;
 }
 .modal__message {
   color: #353a43;

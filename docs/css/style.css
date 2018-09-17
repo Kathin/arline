@@ -1799,8 +1799,8 @@ html.no-mobile .modal__content-share:hover {
   width: 100%;
   background: #e5e7ec;
   height: 67px;
-  line-height: 67px;
-  font-size: 16px;
+  line-height: 0;
+  font-size: 0;
   text-align: center;
 }
 
@@ -1809,6 +1809,8 @@ html.no-mobile .modal__content-share:hover {
   display: inline-block;
   vertical-align: top;
   width: 416px;
+  line-height: 67px;
+  font-size: 16px;
 }
 
 .modal__content-make-button {
@@ -1817,6 +1819,8 @@ html.no-mobile .modal__content-share:hover {
   display: inline-block;
   vertical-align: top;
   width: 112px;
+  line-height: 67px;
+  font-size: 16px;
 }
 
 .modal__message {
