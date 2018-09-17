@@ -580,8 +580,14 @@ jQuery(document).ready(function($) {
         $.ajax({
             type: "get",
             url: $('.gallery__upload').attr('data-resource'),
+            dataType: 'json',
             success: function(data) {
-                $('.gallery__list').append(data);
+                $('.gallery__list').append(data.html);
+                if (data.url.length) {
+                    $('.gallery__upload').attr('data-resource', data.url)
+                } else {                    
+                    $('.gallery__upload').hide();
+                }
             }
         });
     });  
