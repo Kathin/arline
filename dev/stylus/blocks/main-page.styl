@@ -1,573 +1,561 @@
 .main-page
   background-image linear-gradient(60deg, rgba(255,255,255,1) 21%, rgba(243,240,254,1) 100%)/*rgba(243,240,254,1)*/
-.preview
-  padding-top 77px
-  background-image url(../img/bg_top.png)
-  background-repeat no-repeat
-  background-position calc(50% + 401px) 0
-  font-size 0
-  padding-bottom 82px
-  &:after
-    content ''
-    width 100%
-    clear both
-    display block
-    float none
-    height 0px
-    position relative
-  &__left
-    padding-top 155px
-    display inline-block
-    vertical-align top 
-    width 42.5%
-    position relative
-    z-index 1
-  &__right
-    padding-top 95px
-    display inline-block
-    vertical-align top 
-    width 57.5%
-    position relative
-    z-index 1
-  &__subtitle
-    font-size 16px
-    font-weight bold
-    line-height 18px
-    text-transform uppercase
-    padding-bottom 35px
-    color $purple
-  &__title
-    font-size 45px
-    font-weight bold
-    line-height 55px
-    padding-bottom 15px
-    color $black
-  &__text
-    font-size 16px
-    line-height 18px
-    padding-bottom 50px
-    color $gray
-  &__img
-    float right
-    border-radius 24px
-    overflow hidden
-    line-height 0
-    background-color rgb(113, 54, 226)
-    box-shadow 0px 28px 64.68px 19.32px rgba(0, 0, 0, 0.27)
-  &__form
-    &-input
+  .preview
+    padding-top 77px
+    background-image url(../img/bg_top.png)
+    background-repeat no-repeat
+    background-position calc(50% + 401px) 0
+    font-size 0
+    padding-bottom 82px
+    &:after
+      content ''
+      width 100%
+      clear both
+      display block
+      float none
+      height 0px
+      position relative
+    &__left
+      padding-top 155px
       display inline-block
-      border 1px solid #dcdcdc
-      border-radius 27.5px
-      padding 20px 80px 19px 34px
-      width 380px
-      box-sizing border-box
-      height 55px
+      vertical-align top 
+      width 42.5%
       position relative
       z-index 1
-      vertical-align top        
-      .input__placeholder
-        color $gray
-      input:-webkit-autofill
-        -webkit-text-fill-color $black
-    &-button
-      vertical-align top
+    &__right
+      padding-top 95px
       display inline-block
-      border-radius 27.5px
+      vertical-align top 
+      width 57.5%
       position relative
+      z-index 1
+    &__subtitle
       font-size 16px
-      height 55px
-      line-height 16px
-      text-align center
-      padding 20px 25px 19px
-      color #fff
-      z-index 2
-      cursor pointer
-      box-sizing border-box
-      font-weight 500
-      margin-left -72px
-      background #6841f2
-      background linear-gradient(to right, rgba(104,65,242,1) 8%,rgba(104,65,242,1) 8%,rgba(113,54,226,1) 100%)
-      &:hover
-        background #6841f2
-  &__arrow
-    margin 43px auto 0
-    position relative
-    width 32px
-    height 55px
-    display block
-    transition all $speed
-    &:hover
-      opacity 0.8        
-    img 
-      width 100%
-      height 100%
-.principles
-  &__title
-    margin-bottom 45px
-  &__list
-    font-size 0
-    line-height 0
-    &-item
-      width 25%
-      display inline-block
-      vertical-align top
-      padding-left 100px
-      box-sizing border-box
-      &:first-child
-        padding 0          
-        width calc(25% - 49px)
-      &:nth-child(2)
-        width calc(25% + 34px)  
-      &:last-child
-        padding-left 89px
-        width calc(25% + 15px)                   
-      &-title 
-        font-size 18px
-        line-height 24px
-      &-img
-        width 96px
-        margin-bottom 24px
-        img 
-          width 100%
-      &-text
+      font-weight bold
+      line-height 18px
+      text-transform uppercase
+      padding-bottom 35px
+      color $purple
+    &__title
+      font-size 45px
+      font-weight bold
+      line-height 55px
+      padding-bottom 15px
+      color $black
+    &__text
+      font-size 16px
+      line-height 18px
+      padding-bottom 50px
+      color $gray
+    &__img
+      float right
+      border-radius 24px
+      overflow hidden
+      line-height 0
+      background-color rgb(113, 54, 226)
+      box-shadow 0px 28px 64.68px 19.32px rgba(0, 0, 0, 0.27)
+    &__form    
+      &-input
+        display inline-block
+        border 1px solid #dcdcdc
+        border-radius 27.5px
+        padding 20px 80px 19px 34px
+        width 380px
+        box-sizing border-box
+        height 55px
+        position relative
+        z-index 1
+        vertical-align top        
+        .input__placeholder
+          color $gray
+        input:-webkit-autofill
+          -webkit-text-fill-color $black
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
         font-size 16px
-        line-height 24px
-        color #c0bfc5
-        margin-top 12px
-.using
-  background url('../img/tabs.png') no-repeat calc(50% - 476px) -7px
-  padding-top 145px
-  min-height 860px
-  .container
-    box-sizing border-box
-    padding-left 628px    
-  &__title
-    margin-bottom 45px
-  &__tabs
-    display block
-    &-titles
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color #fff
+        z-index 2
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        margin-left -72px
+        background #6841f2
+        background linear-gradient(to right, rgba(104,65,242,1) 8%,rgba(104,65,242,1) 8%,rgba(113,54,226,1) 100%)
+        &:hover
+          background #6841f2
+    &__arrow
+      margin 43px auto 0
+      position relative
+      width 32px
+      height 55px
+      display block
+      transition all $speed
+      &:hover
+        opacity 0.8        
+      img 
+        width 100%
+        height 100%
+  .principles
+    &__title
+      margin-bottom 45px
+    &__list
       font-size 0
       line-height 0
-      border-radius 27.5px
-      border 1px solid #dcdcdc
-      margin-bottom 74px
-      background #fff
-      &-item 
+      &-item
+        width 25%
         display inline-block
         vertical-align top
-        line-height 55px
-        height 55px
-        font-size 16px
-        color $gray
-        background #fff
-        padding 0 24px
-        border-radius 27.5px
-        transition all $speed
-        &:hover
-          color $purple
-          cursor pointer
-        &.active
-          color #ffffff
-          background $purple
-          &:hover
-            color #ffffff              
-    &-content
-      &-item
-        display none
-        position relative
-        &.active
-          display block
-      &-about
-        &-title
-          font-size 38px
-          font-weight bold
-          line-height 38px
-          margin-bottom 10px
+        padding-left 100px
+        box-sizing border-box
+        &:first-child
+          padding 0          
+          width calc(25% - 49px)
+        &:nth-child(2)
+          width calc(25% + 34px)  
+        &:last-child
+          padding-left 89px
+          width calc(25% + 15px)                   
+        &-title 
+          font-size 18px
+          line-height 24px
+        &-img
+          width 96px
+          margin-bottom 24px
+          img 
+            width 100%
         &-text
+          font-size 16px
+          line-height 24px
+          color #c0bfc5
+          margin-top 12px
+  .using
+    background url('../img/tabs.png') no-repeat calc(50% - 476px) -7px
+    padding-top 145px
+    min-height 860px
+    .container
+      box-sizing border-box
+      padding-left 628px    
+    &__title
+      margin-bottom 45px
+    &__tabs
+      display block
+      &-titles
+        font-size 0
+        line-height 0
+        border-radius 27.5px
+        border 1px solid #dcdcdc
+        margin-bottom 74px
+        background #fff
+        &-item 
+          display inline-block
+          vertical-align top
+          line-height 55px
+          height 55px
+          font-size 16px
+          color $gray
+          background #fff
+          padding 0 24px
+          border-radius 27.5px
+          transition all $speed
+          &:hover
+            color $purple
+            cursor pointer
+          &.active
+            color #ffffff
+            background $purple
+            &:hover
+              color #ffffff              
+      &-content
+        &-item
+          display none
+          position relative
+          &.active
+            display block
+        &-about
+          &-title
+            font-size 38px
+            font-weight bold
+            line-height 38px
+            margin-bottom 10px
+          &-text
+            color $gray
+            font-size 16px
+            line-height 24px
+            padding-left 35px
+            max-width 620px
+            position relative
+            &:before
+              content ''
+              width 1px
+              background $purple
+              height calc(100% - 8px) 
+              position absolute
+              top 50%
+              transform translateY(-50%)
+              left 0 
+        &-img
+          position absolute 
+          box-shadow 0px 19px 46px 0px rgba(0, 0, 0, 0.23)
+          overflow hidden
+          border-radius 24px
+          top 105px
+          left -345px
+          font-size 0
+          line-height 0
+        &-arrow
+          top 247px
+          position absolute
           color $gray
           font-size 16px
           line-height 24px
-          padding-left 35px
-          max-width 620px
-          position relative
-          &:before
-            content ''
-            width 1px
-            background $purple
-            height calc(100% - 8px) 
-            position absolute
-            top 50%
-            transform translateY(-50%)
-            left 0 
-      &-img
-        position absolute 
-        box-shadow 0px 19px 46px 0px rgba(0, 0, 0, 0.23)
-        overflow hidden
-        border-radius 24px
-        top 105px
-        left -345px
-        font-size 0
-        line-height 0
-      &-arrow
-        top 247px
-        position absolute
-        color $gray
-        font-size 16px
-        line-height 24px
-        padding-left 232px
-        background url('../img/arrow-tabs.png') no-repeat 0 10px
-        height 135px
-.sphere
-  &__title
-    margin-bottom 18px
-  &__text
-    color $gray
-    font-size 16px
-    line-height 24px
-  &__list
-    padding-top 40px
-    font-size 0
-    line-height 0
-    &-item 
-      display inline-block
-      vertical-align top
-      text-decoration none
-      text-align center
-      border 1px solid #e8e8e8
-      background #fff
-      padding-top 78px
-      box-sizing border-box
-      width 31.8%        
-      height 415px
-      margin-left 2.3%
-      border-radius 24px
-      &:first-child
-        margin-left 0
-      /*&:hover
-        box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
-        text-decoration none*/
-      &-img
-        width 192px
-        display block
-        margin 0 auto          
-        img 
-          width 100%
-      &-title
-        font-size 38px
-        line-height 38px
-        margin-top 25px
-        color $black
-      &-text 
-        font-size 16px
-        line-height 24px
-        margin-top 10px
-        color $gray
-.registration
-  height 548px
-  background url('../img/regisback.png')
-  background-size 100% 100%
-  margin-top 43px
-  padding-top 153px
-  box-sizing border-box
-  color #fff
-  &__title
-    color #fff
-    line-height 55px
-  &__text
-    font-size 16px
-    line-height 45px
-  &__form
-    margin-top 40px
-    &-input
-      display inline-block
-      vertical-align top
-      border-radius 27.5px 
-      border 1px solid #fff
-      margin-right 30px
-      width 373px
-      input, .input__error
-        color #fff 
-    &-button
-      vertical-align top
-      display inline-block
-      border-radius 27.5px
-      position relative
+          padding-left 232px
+          background url('../img/arrow-tabs.png') no-repeat 0 10px
+          height 135px
+  .sphere
+    &__title
+      margin-bottom 18px
+    &__text
+      color $gray
       font-size 16px
-      height 55px
-      line-height 16px
-      text-align center
-      padding 20px 25px 19px
-      color $purple
-      cursor pointer
-      box-sizing border-box
-      font-weight 500
-      background #fff
-      border 1px solid #fff
-      transition all $speed
-      &:hover
-        text-decoration none
-        color #fff 
-        background transparent
-        border 1px solid #fff
-.features
-  font-size 0
-  line-height 0
-  margin-bottom 50px
-  &__title
-    padding 42px 0 45px
-  &__list
-    display inline-block
-    vertical-align top
-    margin-right 35px
-    width 895px
-    &-item
-      display inline-block
-      vertical-align top
-      width 250px
-      margin-left 72.5px
-      margin-bottom 52px
-      &:nth-child(3n+1)
-        margin-left 0
-      &-img 
-        margin-bottom 35px
-      &-title 
-        font-size 18px
-        line-height 20px
-      &-text 
-        font-size 16px
-        line-height 24px 
-        color $gray    
-        margin-top 12px        
-  &__anons
-    display inline-block
-    vertical-align top
-    width 436px
-    background $purple
-    border-radius 24px
-    padding 60px 53px 57px
-    box-sizing border-box
-    color #fff
-    &-title
-      font-size 30px
-      line-height 37px 
-      font-weight bold
-      color #fff
-      margin-bottom 20px
-    &-number
-      font-size 72px
-      line-height 72px
-      margin-top 25px
-      span 
-        font-size 18px
-        line-height 37px
-        display block
-.prices
-  margin-bottom 108px
-  &__title
-    margin-bottom 15px
-  &__text
-    font-size 16px
-    line-height 24px
-    color $gray
-    position relative
-    padding-left 35px
-    &:before
-      content ''
-      width 1px
-      background $purple
-      height calc(100% - 8px) 
-      position absolute
-      top 50%
-      transform translateY(-50%)
-      left 0 
-  &__tabs
-    margin-top 30px
-    &-titles
+      line-height 24px
+    &__list
+      padding-top 40px
       font-size 0
       line-height 0
-      border-radius 27.5px
-      border 1px solid #dcdcdc
-      display inline-block
       &-item 
         display inline-block
         vertical-align top
-        line-height 55px
-        height 55px
-        font-size 16px
-        color $gray
-        padding 0 24px
-        border-radius 27.5px
-        transition all $speed
-        &:hover
-          color $purple
-          cursor pointer
-        &.active
-          color #ffffff
-          background $purple
-          background-image -webkit-linear-gradient(left, #6538d8 8%,  #7136e2 100%)
-          background-image -o-linear-gradient(left, #6538d8 8%, #7136e2 100%)
-          background-image linear-gradient(to right, #6538d8 8%, #7136e2 100%)
-          &:hover
-            color #ffffff
-    &-content
-      margin-top 45px
-      &-item
-        font-size 0
-        line-height 0
-        display none
-        &.active
-          display block
-      &-block
-        display inline-block
-        vertical-align top
-        background-color #fff
-        background-image url('../img/price-block.png')
-        background-position 307px 48px
-        background-repeat no-repeat
-        border-radius 24px
-        border 1px dolid #dcdcdc
-        box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+        text-decoration none
+        text-align center
+        border 1px solid #e8e8e8
+        background #fff
+        padding-top 78px
+        box-sizing border-box
         width 31.8%        
-        height 430px
+        height 415px
         margin-left 2.3%
         border-radius 24px
-        padding 70px 43px 0
-        box-sizing border-box
         &:first-child
           margin-left 0
-        &-title
-          font-size 38px 
-          line-height 38px
-          font-weight bold
-          margin-bottom 5px
-        &-text
-          font-size 16px 
-          line-height 36px
-          color $gray
-        &-price
-          font-size 30px 
-          line-height 48px
-          font-weight bold
-          color #6841f1
-        &-list            
-          font-size 16px 
-          line-height 36px
-          color $gray
-          padding-left 35px 
-          position relative
+        /*&:hover
+          box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+          text-decoration none*/
+        &-img
+          width 192px
+          display block
+          margin 0 auto          
           img 
-            position absolute
-            left 0
-            top 50%
-            transform translateY(-50%)
-        &-button
-          vertical-align top
-          display inline-block
-          border-radius 27.5px
-          position relative
-          font-size 16px
-          height 55px
-          line-height 16px
-          text-align center
-          padding 20px 25px 19px
-          color $purple
-          cursor pointer
-          box-sizing border-box
-          font-weight 500
-          border 1px solid $purple
-          background #fff
-          text-decoration none
-          transition all $speed
+            width 100%
+        &-title
+          font-size 38px
+          line-height 38px
           margin-top 25px
-          &:hover
-            background $purple
-            color #fff
-            text-decoration none
-.summary
-  background url('../img/form-back.png') no-repeat
-  background-position 0 0
-  background-size 48.5% 100%
-  min-height 734px
-  padding-top 156px
-  box-sizing border-box
-  font-size 0
-  margin-bottom 66px
-  &__form
-    display inline-block
-    vertical-align top
-    width 525px
-    &-title
+          color $black
+        &-text 
+          font-size 16px
+          line-height 24px
+          margin-top 10px
+          color $gray
+  .registration
+    height 548px
+    background url('../img/regisback.png')
+    background-size 100% 100%
+    margin-top 43px
+    padding-top 153px
+    box-sizing border-box
+    color #fff
+    &__title
       color #fff
-    &-text
+      line-height 55px
+    &__text
       font-size 16px
       line-height 45px
-      color #fff
-      margin-bottom 35px
-    form
-      width 373px
-    &-input
-      display inline-block
-      vertical-align top
-      border-radius 27.5px 
-      border 1px solid #fff
-      width 100%
-      margin-bottom 30px
-      input, .input__error, .input__placeholder
-        color #fff
-    &-button
-      vertical-align top
-      display inline-block
-      border-radius 27.5px
-      position relative
-      font-size 16px
-      height 55px
-      line-height 16px
-      text-align center
-      padding 20px 25px 19px
-      color $purple
-      cursor pointer
-      box-sizing border-box
-      font-weight 500
-      background #fff
-      width 210px
-      margin-top 30px
-      border 1px solid #fff
-      transition all $speed
-      &.-disable
-        opacity 0.5
-        pointer-events none        
-      &:hover
-        text-decoration none
-        color #fff 
-        background transparent
+    &__form
+      margin-top 40px
+      &-input
+        display inline-block
+        vertical-align top
+        border-radius 27.5px 
         border 1px solid #fff
-  &__partners
-    display inline-block
-    vertical-align top
-    width 595px
-    padding-left 243px
-    &-title 
-      margin-bottom 60px
-    &-list 
-      &-item 
+        margin-right 30px
+        width 373px
+        input, .input__error
+          color #fff 
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+        border 1px solid #fff
+        transition all $speed
+        &:hover
+          text-decoration none
+          color #fff 
+          background transparent
+          border 1px solid #fff
+  .features
+    font-size 0
+    line-height 0
+    margin-bottom 50px
+    &__title
+      padding 42px 0 45px
+    &__list
+      display inline-block
+      vertical-align top
+      margin-right 35px
+      width 895px
+      &-item
         display inline-block
         vertical-align top
         width 250px
-        height 96px
-        margin-left 60px 
-        &:nth-child(2n+1)
+        margin-left 72.5px
+        margin-bottom 52px
+        &:nth-child(3n+1)
           margin-left 0
-
-      
-          
-          
-                 
-      
-          
-            
-          
-          
-          
-          
+        &-img 
+          margin-bottom 35px
+        &-title 
+          font-size 18px
+          line-height 20px
+        &-text 
+          font-size 16px
+          line-height 24px 
+          color $gray    
+          margin-top 12px        
+    &__anons
+      display inline-block
+      vertical-align top
+      width 436px
+      background $purple
+      border-radius 24px
+      padding 60px 53px 57px
+      box-sizing border-box
+      color #fff
+      &-title
+        font-size 30px
+        line-height 37px 
+        font-weight bold
+        color #fff
+        margin-bottom 20px
+      &-number
+        font-size 72px
+        line-height 72px
+        margin-top 25px
+        span 
+          font-size 18px
+          line-height 37px
+          display block
+  .prices
+    margin-bottom 108px
+    &__title
+      margin-bottom 15px
+    &__text
+      font-size 16px
+      line-height 24px
+      color $gray
+      position relative
+      padding-left 35px
+      &:before
+        content ''
+        width 1px
+        background $purple
+        height calc(100% - 8px) 
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        left 0 
+    &__tabs
+      margin-top 30px
+      &-titles
+        font-size 0
+        line-height 0
+        border-radius 27.5px
+        border 1px solid #dcdcdc
+        display inline-block
+        &-item 
+          display inline-block
+          vertical-align top
+          line-height 55px
+          height 55px
+          font-size 16px
+          color $gray
+          padding 0 24px
+          border-radius 27.5px
+          transition all $speed
+          &:hover
+            color $purple
+            cursor pointer
+          &.active
+            color #ffffff
+            background $purple
+            background-image -webkit-linear-gradient(left, #6538d8 8%,  #7136e2 100%)
+            background-image -o-linear-gradient(left, #6538d8 8%, #7136e2 100%)
+            background-image linear-gradient(to right, #6538d8 8%, #7136e2 100%)
+            &:hover
+              color #ffffff
+      &-content
+        margin-top 45px
+        &-item
+          font-size 0
+          line-height 0
+          display none
+          &.active
+            display block
+        &-block
+          display inline-block
+          vertical-align top
+          background-color #fff
+          background-image url('../img/price-block.png')
+          background-position 307px 48px
+          background-repeat no-repeat
+          border-radius 24px
+          border 1px dolid #dcdcdc
+          box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
+          width 31.8%        
+          height 430px
+          margin-left 2.3%
+          border-radius 24px
+          padding 70px 43px 0
+          box-sizing border-box
+          &:first-child
+            margin-left 0
+          &-title
+            font-size 38px 
+            line-height 38px
+            font-weight bold
+            margin-bottom 5px
+          &-text
+            font-size 16px 
+            line-height 36px
+            color $gray
+          &-price
+            font-size 30px 
+            line-height 48px
+            font-weight bold
+            color #6841f1
+          &-list            
+            font-size 16px 
+            line-height 36px
+            color $gray
+            padding-left 35px 
+            position relative
+            img 
+              position absolute
+              left 0
+              top 50%
+              transform translateY(-50%)
+          &-button
+            vertical-align top
+            display inline-block
+            border-radius 27.5px
+            position relative
+            font-size 16px
+            height 55px
+            line-height 16px
+            text-align center
+            padding 20px 25px 19px
+            color $purple
+            cursor pointer
+            box-sizing border-box
+            font-weight 500
+            border 1px solid $purple
+            background #fff
+            text-decoration none
+            transition all $speed
+            margin-top 25px
+            &:hover
+              background $purple
+              color #fff
+              text-decoration none
+  .summary
+    background url('../img/form-back.png') no-repeat
+    background-position 0 0
+    background-size 48.5% 100%
+    min-height 734px
+    padding-top 156px
+    box-sizing border-box
+    font-size 0
+    margin-bottom 66px
+    &__form
+      display inline-block
+      vertical-align top
+      width 525px
+      &-title
+        color #fff
+      &-text
+        font-size 16px
+        line-height 45px
+        color #fff
+        margin-bottom 35px
+      form
+        width 373px
+      &-input
+        display inline-block
+        vertical-align top
+        border-radius 27.5px 
+        border 1px solid #fff
+        width 100%
+        margin-bottom 30px
+        input, .input__error, .input__placeholder
+          color #fff
+      &-button
+        vertical-align top
+        display inline-block
+        border-radius 27.5px
+        position relative
+        font-size 16px
+        height 55px
+        line-height 16px
+        text-align center
+        padding 20px 25px 19px
+        color $purple
+        cursor pointer
+        box-sizing border-box
+        font-weight 500
+        background #fff
+        width 210px
+        margin-top 30px
+        border 1px solid #fff
+        transition all $speed
+        &.-disable
+          opacity 0.5
+          pointer-events none        
+        &:hover
+          text-decoration none
+          color #fff 
+          background transparent
+          border 1px solid #fff
+    &__partners
+      display inline-block
+      vertical-align top
+      width 595px
+      padding-left 243px
+      &-title 
+        margin-bottom 60px
+      &-list 
+        &-item 
+          display inline-block
+          vertical-align top
+          width 250px
+          height 96px
+          margin-left 60px 
+          &:nth-child(2n+1)
+            margin-left 0
       

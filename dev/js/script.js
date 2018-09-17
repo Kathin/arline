@@ -647,8 +647,7 @@ jQuery(document).ready(function($) {
                         opacity: .6
                     }
                 },
-                afterLoading: function(data, el) {  
-                console.log(r)                
+                afterLoading: function(data, el) {              
                 },
                 afterLoadingOnShow: function(data, el) {
                     
@@ -661,11 +660,9 @@ jQuery(document).ready(function($) {
             e.preventDefault();
             e.stopImmediatePropagation;
             var target = e.target;
-            console.log(target)
             while (target != this) {
                 if (target.hasAttribute('data-modal')){
-                   var src = target.getAttribute('data-modal')
-                   console.log($(this))
+                    var src = target.getAttribute('data-modal')
                     $.arcticmodal({
                         type: 'ajax',
                         url: src,
@@ -701,22 +698,18 @@ jQuery(document).ready(function($) {
             }
         });
     });
-    
-    /*var modal = window.location.href
-    $.arcticmodal({
-        type: 'ajax',
-        url: modal,
-        overlay: {
-            css: {
-                backgroundColor: '#353a43',
-                opacity: .6
-            }
-        },
-        afterLoading: function(data, el) {
-           console.log(href)
-        },
-        afterLoadingOnShow: function(data, el) {
-            
-        }
-    });*/
+    window.onload = function() {
+        var modal = window.location.href
+        if (modal.indexOf('?') + 1)
+            $.arcticmodal({
+                type: 'ajax',
+                url: modal,
+                overlay: {
+                    css: {
+                        backgroundColor: '#353a43',
+                        opacity: .6
+                    }
+                }
+            });
+    }
 })
