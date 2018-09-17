@@ -629,31 +629,58 @@ jQuery(document).ready(function($) {
                     $('.gallery__upload').hide();
                 }
             }
-        });
+        })      
     });  
     /*модальные окна*/  
-
-    $("[data-modal]").on('click', function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation;
-        var src = $(this).attr('data-modal')
-        $.arcticmodal({
-            type: 'ajax',
-            url: src,
-            overlay: {
-                css: {
-                    backgroundColor: '#353a43',
-                    opacity: .6
+    /*статичная функция*/
+    function Modal(r) {
+        $("[data-modal]").on('click', function(e){
+            e.preventDefault();
+            e.stopImmediatePropagation;
+            var src = $(this).attr('data-modal')
+            $.arcticmodal({
+                type: 'ajax',
+                url: src,
+                overlay: {
+                    css: {
+                        backgroundColor: '#353a43',
+                        opacity: .6
+                    }
+                },
+                afterLoading: function(data, el) {  
+                console.log(r)                
+                },
+                afterLoadingOnShow: function(data, el) {
+                    
                 }
-            },
-            afterLoading: function(data, el) {
-               
-            },
-            afterLoadingOnShow: function(data, el) {
-                
-            }
+            });
         });
-    });
+    }
+    /*динамичная функция*/
+    $(".gallery__list").on('click', function(e){
+            e.preventDefault();
+            e.stopImmediatePropagation;
+            var target = e.target;
+            console.log(target)
+            while (target != this) {
+                if (target.hasAttribute('data-modal')){
+                   var src = target.getAttribute('data-modal')
+                   console.log($(this))
+                    $.arcticmodal({
+                        type: 'ajax',
+                        url: src,
+                        overlay: {
+                            css: {
+                                backgroundColor: '#353a43',
+                                opacity: .6
+                            }
+                        }
+                    }); 
+                }
+                target = target.parentNode;
+            }
+
+    })
     /* Сворачивание инфы*/
     $(".support__faq-item").each(function() {
         var target = "";
