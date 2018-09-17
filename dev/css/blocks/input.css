@@ -67,6 +67,7 @@
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: none;
+  background-color: transparent;
 }
 .input input:focus ~ .input__placeholder {
   display: none;

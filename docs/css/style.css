@@ -698,6 +698,7 @@ html.no-mobile .gallery__upload:hover {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: none;
+  background-color: transparent;
 }
 
 .input input:focus ~ .input__placeholder {
@@ -1257,73 +1258,6 @@ html.no-mobile .main-page .using__tabs-titles-item.active:hover {
   color: #c0bfc5;
 }
 
-.main-page .registration {
-  height: 548px;
-  background: url("../img/regisback.png");
-  background-size: 100% 100%;
-  margin-top: 43px;
-  padding-top: 153px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #fff;
-}
-
-.main-page .registration__title {
-  color: #fff;
-  line-height: 55px;
-}
-
-.main-page .registration__text {
-  font-size: 16px;
-  line-height: 45px;
-}
-
-.main-page .registration__form {
-  margin-top: 40px;
-}
-
-.main-page .registration__form-input {
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 27.5px;
-  border: 1px solid #fff;
-  margin-right: 30px;
-  width: 373px;
-}
-
-.main-page .registration__form-input input,
-.main-page .registration__form-input .input__error {
-  color: #fff;
-}
-
-.main-page .registration__form-button {
-  vertical-align: top;
-  display: inline-block;
-  border-radius: 27.5px;
-  position: relative;
-  font-size: 16px;
-  height: 55px;
-  line-height: 16px;
-  text-align: center;
-  padding: 20px 25px 19px;
-  color: #6841f2;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-weight: 500;
-  background: #fff;
-  border: 1px solid #fff;
-  -webkit-transition: all 150ms;
-  transition: all 150ms;
-}
-
-html.no-mobile .main-page .registration__form-button:hover {
-  text-decoration: none;
-  color: #fff;
-  background: transparent;
-  border: 1px solid #fff;
-}
-
 .main-page .features {
   font-size: 0;
   line-height: 0;
@@ -1680,6 +1614,73 @@ html.no-mobile .main-page .summary__form-button:hover {
 
 .main-page .summary__partners-list-item:nth-child(2n+1) {
   margin-left: 0;
+}
+
+.registration {
+  height: 548px;
+  background: url("../img/regisback.png");
+  background-size: 100% 100%;
+  margin-top: 43px;
+  padding-top: 153px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.registration__title {
+  color: #fff;
+  line-height: 55px;
+}
+
+.registration__text {
+  font-size: 16px;
+  line-height: 45px;
+}
+
+.registration__form {
+  margin-top: 40px;
+}
+
+.registration__form-input {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 27.5px;
+  border: 1px solid #fff;
+  margin-right: 30px;
+  width: 373px;
+}
+
+.registration__form-input input,
+.registration__form-input .input__error {
+  color: #fff;
+}
+
+.registration__form-button {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 27.5px;
+  position: relative;
+  font-size: 16px;
+  height: 55px;
+  line-height: 16px;
+  text-align: center;
+  padding: 20px 25px 19px;
+  color: #6841f2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #fff;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+html.no-mobile .registration__form-button:hover {
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
 }
 
 .modal {
