@@ -380,9 +380,9 @@ h6,
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #fff), to(#f3f0fe));
   background-image: -webkit-linear-gradient(bottom, #fff 40%, #f3f0fe 100%);
   background-image: linear-gradient(0deg, #fff 40%, #f3f0fe 100%);
-  padding-top: 250px;
+  padding-top: 150px;
   text-align: center;
-  height: calc(100vh - 332px);
+  min-height: calc(100vh - 332px);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
