@@ -21,7 +21,6 @@
 html,
 body {
   background-color: #fff;
-  overflow: overlay;
 }
 html {
   -ms-touch-action: manipulation;
