@@ -684,6 +684,10 @@
   -webkit-transition: all 150ms;
   transition: all 150ms;
 }
+.summary__form-button.-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .summary__form-button:hover {
   text-decoration: none;
   color: #fff;
