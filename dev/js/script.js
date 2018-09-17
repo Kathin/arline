@@ -634,4 +634,22 @@ jQuery(document).ready(function($) {
             }
         });
     });
+    
+    /*var modal = window.location.href
+    $.arcticmodal({
+        type: 'ajax',
+        url: modal,
+        overlay: {
+            css: {
+                backgroundColor: '#353a43',
+                opacity: .6
+            }
+        },
+        afterLoading: function(data, el) {
+           console.log(href)
+        },
+        afterLoadingOnShow: function(data, el) {
+            
+        }
+    });*/
 })
