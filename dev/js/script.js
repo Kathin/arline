@@ -6,7 +6,8 @@ jQuery(document).ready(function($) {
       // First, let's merge real config with default values...
 
       let defaults = {
-        path: '../',
+        path: '',
+        modal: ''
       }
 
       if (!window.ENV) {
@@ -698,9 +699,10 @@ jQuery(document).ready(function($) {
             }
         });
     });
+    /*модальное окно по ссылке*/
     window.onload = function() {
-        var modal = window.location.href
-        if (modal.indexOf('?') + 1)
+        if ((window.ENV.modal.length) && ($(".gallery").length)){
+            var modal = window.ENV.modal
             $.arcticmodal({
                 type: 'ajax',
                 url: modal,
@@ -711,5 +713,6 @@ jQuery(document).ready(function($) {
                     }
                 }
             });
+        }
     }
 })
