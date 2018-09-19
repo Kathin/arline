@@ -12,18 +12,6 @@ jQuery(document).ready(function($) {
 
       if (!window.ENV) {
         window.ENV = defaults
-      } else {
-        let result = {}
-
-        // Т.к. Object.assign не делает "глубокий" мерж,
-        // сначала получаем общий список всех ключей из двух конфигов,
-        // затем мержим их содержимое по отдельности
-
-        Object.keys(Object.assign({}, defaults, window.ENV)).forEach(key => {
-          result[key] = Object.assign({}, defaults[key], window.ENV[key])
-        })
-
-        window.ENV = result
       }
     })()
     /*Плавная прокрутка*/
