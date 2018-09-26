@@ -30,6 +30,13 @@
   top: 0;
   left: 0;
   z-index: 8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media only screen and (max-width: 980px) {
+  .topnav {
+    padding: 35px 40px 0;
+  }
 }
 .topnav a {
   color: #353a43;
@@ -49,6 +56,49 @@
   display: table;
   width: 100%;
   font: 0/0 'a';
+}
+.topnav__burger {
+  width: 28px;
+  height: 18px;
+  border-top: 2px solid #fff;
+  position: relative;
+  cursor: pointer;
+}
+.topnav__burger:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.topnav__burger:after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.topnav__burger img {
+  opacity: 0;
+}
+@media only screen and (min-width: 981px) {
+  .topnav__burger {
+    display: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topnav__burger {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    float: right;
+  }
 }
 .topnav__logo {
   display: inline-block;
@@ -78,14 +128,46 @@
   float: right;
   line-height: 0;
 }
+@media only screen and (min-width: 981px) {
+  .topnav__list {
+    float: right;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topnav__list {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff url("../img/bg_top.png") no-repeat;
+    background-position: -250px 0;
+    height: 100vh;
+    left: 0;
+    padding: 50px 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .topnav__list-item {
-  display: inline-block;
   line-height: 42px;
   font-size: 16px;
-  margin: 0 0 0 45px;
   vertical-align: baseline;
   -webkit-transition: all 150ms;
   transition: all 150ms;
+}
+@media only screen and (min-width: 981px) {
+  .topnav__list-item {
+    display: inline-block;
+    margin: 0 0 0 45px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .topnav__list-item {
+    display: block;
+  }
 }
 .topnav__list-item.-active {
   color: #6841f2;

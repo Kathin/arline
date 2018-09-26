@@ -115,13 +115,19 @@ a[href*="tel:"] {
   width: 100%;
   overflow: hidden;
   position: relative;
-  min-width: 1406px;
 }
 .container {
   margin: auto;
   max-width: 1366px;
   position: relative;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .container {
+    padding: 0 40px;
+  }
 }
 hr {
   display: block;

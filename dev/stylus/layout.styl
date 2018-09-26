@@ -63,12 +63,15 @@ a
   width 100% 
   overflow hidden
   position relative
-  min-width 1406px//1280px//
+  //min-width 1406px//1280px//
 .container
   margin auto
   max-width 1366px//1240px//
   position relative
   width 100%  
+  box-sizing border-box
+  +btw($m, $t)    
+    padding 0 40px
     
 hr
   display block
