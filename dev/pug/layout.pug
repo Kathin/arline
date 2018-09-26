@@ -32,7 +32,7 @@ doctype html
           .topnav 
             a.topnav__logo(href="/")
               img(src="img/logo.png")
-            .topnav__burger
+            .topnav__burger#pull
               img(src="img/burger.png")
             .topnav__list 
               a.topnav__list-item(href="#") Конструктор
@@ -40,11 +40,13 @@ doctype html
               a.topnav__list-item.-active(href="gallery.html") Галерея
               a.topnav__list-item(href="support.html") Поддержка
               a.topnav__list-item.-enter(href="registration.html") Войти
+              .topnav__list-close
+                img(src="img/cross.png")
         else
           .topnav.-main 
             a.topnav__logo(href="/")
               img(src="img/logo.png") 
-            .topnav__burger
+            .topnav__burger#pull
               img(src="img/burger.png")
             .topnav__list 
               a.topnav__list-item(href="#") Конструктор
@@ -52,6 +54,8 @@ doctype html
               a.topnav__list-item(href="gallery.html") Галерея
               a.topnav__list-item(href="support.html") Поддержка
               a.topnav__list-item.-enter(href="registration.html") Войти
+              .topnav__list-close
+                img(src="img/cross.png")
 
       .content
         block main
