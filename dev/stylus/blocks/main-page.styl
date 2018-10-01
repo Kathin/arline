@@ -4,9 +4,12 @@
     padding-top 77px
     background-image url(../img/bg_top.png)
     background-repeat no-repeat
-    background-position calc(50% + 401px) 0
     font-size 0
     padding-bottom 82px
+    +a($t)
+      background-position calc(50% + 401px) 0
+    +b($t)
+      background-position calc(50% + 572px) 0
     &:after
       content ''
       width 100%
@@ -16,65 +19,107 @@
       height 0px
       position relative
     &__left
-      padding-top 155px
-      display inline-block
       vertical-align top 
-      width 42.5%
       position relative
       z-index 1
+      +a($t)
+        width 42.5%   
+        display inline-block
+        padding-top 155px     
+      +b($t)
+        width 100%   
+        display block 
+        padding-top 61px   
     &__right
-      padding-top 95px
-      display inline-block
-      vertical-align top 
-      width 57.5%
+      vertical-align bottom
       position relative
       z-index 1
+      +a($t)
+        display inline-block
+        width 57.5%
+        padding-top 95px
+      +btw($m, $t)
+        width 100%   
+        display block 
+        padding-top 55px
+      +b($m)
+        width 100%   
+        display block 
+        padding-top 36px
     &__subtitle
-      font-size 16px
       font-weight bold
-      line-height 18px
       text-transform uppercase
       padding-bottom 35px
       color $purple
+      +a($m)
+        font-size 16px
+        line-height 18px
+      +b($m)
+        font-size 11px
+        line-height 15px
+        text-shadow 0px 0px 2px #fff 
     &__title
-      font-size 45px
       font-weight bold
-      line-height 55px
       padding-bottom 15px
       color $black
+      max-width 581px
+      +a($m)
+        line-height 55px
+        font-size 45px
+      +b($m)
+        line-height 33px
+        font-size 27px
     &__text
       font-size 16px
       line-height 18px
-      padding-bottom 50px
       color $gray
+      +a($m)
+        padding-bottom 50px
+      +b($m)
+        padding-bottom 30px
     &__img
       float right
-      border-radius 24px
       overflow hidden
       line-height 0
       background-color rgb(113, 54, 226)
       box-shadow 0px 28px 64.68px 19.32px rgba(0, 0, 0, 0.27)
-    &__form    
+      margin-left 30px
+      +a($t)
+        max-width 100% 
+        border-radius 24px       
+      +btw($m, $t)
+        width 100%
+        border-radius 24px   
+      +b($m)
+        border-radius 13px 
+        width 100%      
+      img 
+        width 100%
+    &__form 
+      width 100%  
+      max-width 515px 
+      position relative
       &-input
         display inline-block
         border 1px solid #dcdcdc
         border-radius 27.5px
-        padding 20px 80px 19px 34px
-        width 380px
+        padding 20px 220px 19px 34px
+        //width 380px
+        width 100%
+        max-width 515px
         box-sizing border-box
         height 55px
         position relative
         z-index 1
-        vertical-align top        
+        vertical-align top    
         .input__placeholder
           color $gray
         input:-webkit-autofill
           -webkit-text-fill-color $black
       &-button
         vertical-align top
-        display inline-block
         border-radius 27.5px
-        position relative
+        //position relative
         font-size 16px
         height 55px
         line-height 16px
@@ -85,9 +130,18 @@
         cursor pointer
         box-sizing border-box
         font-weight 500
-        margin-left -72px
+        //margin-left -72px
         background #6841f2
-        background linear-gradient(to right, rgba(104,65,242,1) 8%,rgba(104,65,242,1) 8%,rgba(113,54,226,1) 100%)
+        right 0
+        background linear-gradient(to right, rgba(104,65,242,1) 8%,rgba(104,65,242,1) 8%,rgba(113,54,226,1) 100%) 
+        +a($m)
+          display inline-block 
+          position absolute         
+        +b($m)  
+          width 100%
+          display block 
+          position relative
+          margin-top 15px
         &:hover
           background #6841f2
     &__arrow
@@ -95,8 +149,11 @@
       position relative
       width 32px
       height 55px
-      display block
       transition all $speed
+      +a($t)
+        display block
+      +b($t)
+        display none
       &:hover
         opacity 0.8        
       img 
@@ -109,19 +166,27 @@
       font-size 0
       line-height 0
       &-item
-        width 25%
         display inline-block
         vertical-align top
-        padding-left 100px
         box-sizing border-box
-        &:first-child
-          padding 0          
-          width calc(25% - 49px)
-        &:nth-child(2)
-          width calc(25% + 34px)  
-        &:last-child
-          padding-left 89px
-          width calc(25% + 15px)                   
+        +a($t)
+          width 25%
+          padding-left 100px
+          &:first-child
+            padding 0          
+            width calc(25% - 49px)
+          &:nth-child(2)
+            width calc(25% + 34px)  
+          &:last-child
+            padding-left 89px
+            width calc(25% + 15px)     
+        +b($t) 
+          width 50%  
+          padding-left 55px 
+          margin-bottom 45px
+          &:nth-child(2n+1)
+            padding 0          
+            width calc(50% - 49px)            
         &-title 
           font-size 18px
           line-height 24px

@@ -46,7 +46,7 @@
 .topnav a {
   color: #353a43;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav a {
     color: #fff;
   }
@@ -55,7 +55,7 @@
   color: #6841f2;
   text-decoration: none;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav a:hover {
     opacity: 0.7;
     color: #fff;
@@ -103,12 +103,12 @@
 .topnav__burger img {
   opacity: 0;
 }
-@media only screen and (min-width: 981px) {
+@media only screen and (min-width: 1024px) {
   .topnav__burger {
     display: none;
   }
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__burger {
     display: inline-block;
     vertical-align: top;
@@ -153,12 +153,12 @@
 .topnav__list {
   line-height: 0;
 }
-@media only screen and (min-width: 981px) {
+@media only screen and (min-width: 1024px) {
   .topnav__list {
     float: right;
   }
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list {
     position: fixed;
     top: 0;
@@ -203,12 +203,12 @@
   transition: all 150ms;
   display: inline-block;
 }
-@media only screen and (min-width: 981px) {
+@media only screen and (min-width: 1024px) {
   .topnav__list-item {
     margin: 0 0 0 45px;
   }
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list-item {
     margin-top: 10px;
     width: 120px;
@@ -219,7 +219,7 @@
 .topnav__list-item.-active {
   color: #6841f2;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list-item.-active {
     color: #fff;
     text-decoration: underline;
@@ -245,7 +245,7 @@
   text-align: center;
   text-shadow: none;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list-item.-enter {
     border: 1px solid #fff;
     color: #fff;
@@ -261,7 +261,7 @@
   background: #6841f2;
   color: #fff;
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list-item.-enter:hover {
     opacity: 1;
     border: 1px solid #fff;
@@ -276,12 +276,12 @@
   cursor: pointer;
   opacity: 0.6;
 }
-@media only screen and (min-width: 981px) {
+@media only screen and (min-width: 1024px) {
   .topnav__list-close {
     display: none;
   }
 }
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1023px) {
   .topnav__list-close {
     display: inline-block;
   }
