@@ -265,6 +265,18 @@
 .main-page .principles__title {
   margin-bottom: 45px;
 }
+@media only screen and (min-width: 768px) {
+  .main-page .principles__title {
+    line-height: 55px;
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .principles__title {
+    line-height: 33px;
+    font-size: 27px;
+  }
+}
 .main-page .principles__list {
   font-size: 0;
   line-height: 0;
@@ -292,15 +304,21 @@
     width: calc(25% + 15px);
   }
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .main-page .principles__list-item {
-    width: 50%;
-    padding-left: 55px;
-    margin-bottom: 45px;
+    width: calc(50% + 18px);
+    padding-left: 95px;
+    margin-bottom: 52px;
   }
   .main-page .principles__list-item:nth-child(2n+1) {
     padding: 0;
     width: calc(50% - 49px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .principles__list-item {
+    width: 100%;
+    margin-bottom: 39px;
   }
 }
 .main-page .principles__list-item-title {
@@ -321,17 +339,48 @@
   margin-top: 12px;
 }
 .main-page .using {
-  background: url("../img/tabs.png") no-repeat calc(50% - 476px) -7px;
-  padding-top: 145px;
-  min-height: 860px;
+  position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .main-page .using {
+    padding-top: 145px;
+    min-height: 860px;
+    background: url("../img/tabs.png") no-repeat calc(50% - 476px) -7px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .main-page .using {
+    padding-top: 0;
+    min-height: 1064px;
+    background: url("../img/tabs.png") no-repeat calc(50% - 364px) 197px;
+    background-size: 875px;
+  }
 }
 .main-page .using .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 628px;
+}
+@media only screen and (min-width: 1024px) {
+  .main-page .using .container {
+    max-width: 739px;
+    right: 0;
+    position: absolute;
+  }
 }
 .main-page .using__title {
   margin-bottom: 45px;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .using__title {
+    line-height: 55px;
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .using__title {
+    line-height: 33px;
+    font-size: 27px;
+  }
 }
 .main-page .using__tabs {
   display: block;
@@ -341,9 +390,19 @@
   line-height: 0;
   border-radius: 27.5px;
   border: 1px solid #dcdcdc;
-  margin-bottom: 74px;
   background: #fff;
   white-space: nowrap;
+  min-width: 670px;
+}
+@media only screen and (min-width: 1336px) {
+  .main-page .using__tabs-titles {
+    margin-bottom: 74px;
+  }
+}
+@media only screen and (max-width: 1335px) {
+  .main-page .using__tabs-titles {
+    margin-bottom: 39px;
+  }
 }
 .main-page .using__tabs-titles-item {
   display: inline-block;
@@ -353,10 +412,13 @@
   font-size: 16px;
   color: #c0bfc5;
   background: #fff;
-  padding: 0 24px;
   border-radius: 27.5px;
   -webkit-transition: all 150ms;
   transition: all 150ms;
+  width: calc(100% / 4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
 }
 .main-page .using__tabs-titles-item:hover {
   color: #6841f2;
@@ -408,20 +470,43 @@
           box-shadow: 0px 19px 46px 0px rgba(0,0,0,0.23);
   overflow: hidden;
   border-radius: 24px;
-  top: 105px;
-  left: -345px;
   font-size: 0;
   line-height: 0;
 }
+@media only screen and (min-width: 1024px) {
+  .main-page .using__tabs-content-img {
+    top: 105px;
+    left: -345px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .main-page .using__tabs-content-img {
+    top: 482px;
+    left: 120px;
+  }
+}
 .main-page .using__tabs-content-arrow {
-  top: 247px;
   position: absolute;
   color: #c0bfc5;
   font-size: 16px;
   line-height: 24px;
-  padding-left: 232px;
-  background: url("../img/arrow-tabs.png") no-repeat 0 10px;
   height: 135px;
+}
+@media only screen and (min-width: 1024px) {
+  .main-page .using__tabs-content-arrow {
+    top: 247px;
+    background: url("../img/arrow-tabs.png") no-repeat 0 10px;
+    padding-left: 232px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .main-page .using__tabs-content-arrow {
+    top: 486px;
+    right: 113px;
+    background: url("../img/arrow-tabs.png") no-repeat 0 14px;
+    background-size: 156px;
+    padding-left: 94px;
+  }
 }
 .main-page .sphere__title {
   margin-bottom: 18px;
