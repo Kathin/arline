@@ -381,7 +381,8 @@
             display none
   .sphere
     .container
-      padding 0
+      +a($m)
+        padding 0
     &__title
       margin-bottom 18px 
       max-width 100% 
@@ -403,41 +404,65 @@
       padding-top 40px
       font-size 0
       line-height 0
-      min-width 1366px 
+      +a($m)
+        min-width 1366px
+      +b($m) 
+        width 100%
       &-item 
-        display inline-block
         vertical-align top
         text-decoration none
         text-align center
         border 1px solid #e8e8e8
         background #fff
-        padding-top 78px
         box-sizing border-box
-        width 31.8%        
-        height 415px
-        margin-left 2.3%
-        border-radius 24px
-        &:first-child
-          margin-left 0
+        +a($m)
+          display inline-block
+          width 31.8%        
+          height 415px
+          margin-left 2.3%
+          border-radius 24px
+          padding-top 78px
+          &:first-child
+            margin-left 0
+        +b($m)
+          display block
+          width 282px        
+          height 284px
+          margin 0 auto 24px
+          border-radius 14px
+          padding 37px 10px 0
+          br 
+            display none
         /*&:hover
           box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
           text-decoration none*/
         &-img
-          width 192px
           display block
-          margin 0 auto          
+          margin 0 auto  
+          +a($m)  
+            width 192px
+          +b($m)     
+            width 159px 
           img 
             width 100%
         &-title
-          font-size 38px
-          line-height 38px
           margin-top 25px
           color $black
+          +a($m)
+            font-size 38px
+            line-height 38px
+          +b($m)
+            font-size 20px
+            line-height 24px 
         &-text 
-          font-size 16px
-          line-height 24px
           margin-top 10px
           color $gray
+          +a($m)  
+            font-size 16px
+            line-height 24px
+          +b($m)      
+            font-size 16px
+            line-height 24px 
   .features
     font-size 0
     line-height 0

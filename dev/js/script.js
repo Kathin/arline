@@ -737,4 +737,16 @@ jQuery(document).ready(function($) {
             }, 200);
         });
     });
+    /*Смещение скролла на главной*/
+    $(function() {
+        $(".sphere__wrap").each(function() {            
+            var x = (1366 - document.body.clientWidth)/2,
+                self = $(this)
+            self.scrollLeft(x)
+            $( window ).resize(function() {
+              x = (1366 - document.body.clientWidth)/2,
+              self.scrollLeft(x)
+            });
+        })
+    })
 })
