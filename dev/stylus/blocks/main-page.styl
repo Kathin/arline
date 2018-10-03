@@ -214,29 +214,49 @@
     +a($t)
       padding-top 145px
       min-height 860px
-      background url('../img/tabs.png') no-repeat calc(50% - 476px) -7px
-    +b($t)
+      background url('../img/tabs.png') no-repeat calc(50% - 476px) -7px    
+    +btw($t, $d)
+      padding-top 145px
+      min-height 860px
+      background url("../img/tabs.png") no-repeat calc(10% - 520px) -7px   
+    +btw($m, $t)
       padding-top 0
       min-height 1064px
-      background url('../img/tabs.png') no-repeat calc(50% - 364px) 197px
+      background url('../img/tabs.png') no-repeat -361px 197px
       background-size 875px
-    .container
-      box-sizing border-box 
+    +b($m)
+      padding-top 43px
+      min-height 749px
+      background url('../img/tabs.png') no-repeat -122px 359px
+      background-size 401px
+    &__wrap
       +a($t)
         //padding-left 628px 
         max-width 739px
-        right 0
+        right 40px
         position absolute
+    .container
+      position relative
+      +b($m)
+        padding 0
     &__title
-      margin-bottom 45px
       +a($m)
         line-height 55px
         font-size 45px
+        margin-bottom 45px
       +b($m)
         line-height 33px
         font-size 27px
+        padding 0 20px
+        margin-bottom 25px
     &__tabs
       display block
+      +b($m)
+        overflow auto
+        -ms-overflow-style none
+        overflow -moz-scrollbars-none
+      &::-webkit-scrollbar 
+        width 0
       &-titles
         font-size 0
         line-height 0
@@ -244,11 +264,10 @@
         border 1px solid #dcdcdc
         background #fff
         white-space nowrap
-        min-width 670px
-        +a($d)
-          margin-bottom 74px
         +b($d) 
-          margin-bottom 39px
+          min-width 670px
+        +b($m)
+          margin 0 20px
         &-item 
           display inline-block
           vertical-align top
@@ -259,9 +278,12 @@
           background #fff
           border-radius 27.5px
           transition all $speed
-          width calc(100%/4)
           box-sizing border-box
           text-align center
+          +a($d)
+            padding 0 24px
+          +b($d) 
+            width calc(100%/4)
           &:hover
             color $purple
             cursor pointer
@@ -270,7 +292,16 @@
             background $purple
             &:hover
               color #ffffff              
-      &-content
+      &-content        
+        +a($d)
+          margin-top 74px
+        +btw($m, $d) 
+          margin-top 39px
+          min-width 100%         
+        +b($m)
+          padding 0 20px
+          position absolute
+          margin-top 27px
         &-item
           display none
           position relative
@@ -278,17 +309,28 @@
             display block
         &-about
           &-title
-            font-size 38px
             font-weight bold
-            line-height 38px
             margin-bottom 10px
+            +a($m)
+              font-size 38px
+              line-height 38px
+            +b($m)
+              font-size 20px
+              line-height 24px
           &-text
             color $gray
             font-size 16px
             line-height 24px
             padding-left 35px
-            max-width 620px
             position relative
+            width 100% 
+            box-sizing border-box
+            +a($t)
+              max-width 620px
+            +btw($m, $t)
+              padding-right 40px
+            +b($m)
+              padding-right 20px
             &:before
               content ''
               width 1px
@@ -302,15 +344,23 @@
           position absolute 
           box-shadow 0px 19px 46px 0px rgba(0, 0, 0, 0.23)
           overflow hidden
-          border-radius 24px
           font-size 0
           line-height 0
           +a($t)
             top 105px
             left -345px
-          +b($t)
+            border-radius 24px
+          +btw($m, $t)
             top 482px
             left 120px
+            border-radius 24px
+          +b($m)
+            top 350px
+            width 150px
+            left 131px
+            border-radius 14px
+          img
+            width 100%
         &-arrow
           position absolute
           color $gray
@@ -321,23 +371,39 @@
             top 247px
             background url('../img/arrow-tabs.png') no-repeat 0 10px
             padding-left 232px
-          +b($t)
+          +btw($m, $t)
             top 486px
-            right 113px
+            left 447px
             background url('../img/arrow-tabs.png') no-repeat 0 14px
             background-size 156px
             padding-left 94px
+          +b($m)
+            display none
   .sphere
+    .container
+      padding 0
     &__title
-      margin-bottom 18px
+      margin-bottom 18px 
+      max-width 100% 
+      padding 0 20px
     &__text
       color $gray
       font-size 16px
       line-height 24px
+      max-width 100% 
+      padding 0 20px
+    &__wrap
+      max-width 100%
+      overflow auto
+      -ms-overflow-style none
+      overflow -moz-scrollbars-none
+      &::-webkit-scrollbar 
+        width 0
     &__list
       padding-top 40px
       font-size 0
       line-height 0
+      min-width 1366px 
       &-item 
         display inline-block
         vertical-align top
