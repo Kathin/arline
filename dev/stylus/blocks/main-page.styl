@@ -712,13 +712,18 @@
           &:nth-child(2n+1)
             margin-left 0
 .registration
-  height 548px
   background url('../img/regisback.png')
   background-size 100% 100%
   margin-top 43px
-  padding-top 153px
   box-sizing border-box
   color #fff
+  +a($d)
+    background-size 100% 100%  
+    min-height 548px  
+    padding-top 153px
+  +b($d)
+    background-size cover
+    padding 153px 0
   &__title
     color #fff
     line-height 55px
