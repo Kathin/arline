@@ -6,14 +6,24 @@
   &__form
     display inline-block
     vertical-align top
-    background url("../img/form-support.png") no-repeat    
-    padding 65px 120px
+    background url("../img/form-support.png") no-repeat 
     box-sizing border-box
-    background-size 100% 100%
     text-align left
+    +a($m)   
+      padding 65px 120px
+      background-size 100% 100%
+    +b($m)
+      width calc(100% + 40px)
+      padding 65px 20px
+      margin-left -20px
+      background-size calc(100% + 280px) 100%
+      background-position center
     form         
-      width 373px
       margin-top 26px
+      +a($m)
+        width 373px
+      +b($m)
+        width 100%
     &-title
       color #fff
       font-size 23px 
@@ -53,8 +63,11 @@
       background #fff
       transition all $speed
       border 1px solid #fff
-      width 210px
       margin-top 20px
+      +a($m)
+        width 210px
+      +b($m)
+        width 100%
       &:hover
         text-decoration none 
         color #fff 
@@ -66,21 +79,34 @@
       font-size 14px
       line-height 24px
       margin-top 20px
-      padding-left 34px
       font-style italic
-      opacity 0.6
-      text-align center
+      opacity 0.6    
+      +a($m)   
+        text-align center 
+        padding-left 34px
+      +b($m)
+        text-align left
       a 
         color #fff        
 .autorization__form
   display inline-block
   vertical-align top
-  background url("../img/form-support.png") no-repeat    
-  padding 65px 120px
+  background url("../img/form-support.png") no-repeat  
   box-sizing border-box
-  background-size 100% 100%
   text-align left
+  +a($m)   
+    padding 65px 120px
+    background-size 100% 100%
+  +b($m)
+    width calc(100% + 40px)
+    padding 65px 20px
+    margin-left -20px
+    background-size calc(100% + 280px) 100%
+    background-position center
   form         
-    width 373px
     margin-top 26px
+    +a($m)
+      width 373px
+    +b($m)
+      width 100%
       

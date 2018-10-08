@@ -20,6 +20,7 @@
 }
 .registration-page {
   background-image: -webkit-linear-gradient(68deg, #fff 21%, #f3f0fe 100%);
+  background-image: -o-linear-gradient(68deg, #fff 21%, #f3f0fe 100%);
   background-image: linear-gradient(22deg, #fff 21%, #f3f0fe 100%);
   padding-top: 120px;
   padding-bottom: 60px;
@@ -29,15 +30,37 @@
   display: inline-block;
   vertical-align: top;
   background: url("../img/form-support.png") no-repeat;
-  padding: 65px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-size: 100% 100%;
   text-align: left;
 }
+@media only screen and (min-width: 768px) {
+  .registration-page__form {
+    padding: 65px 120px;
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration-page__form {
+    width: calc(100% + 40px);
+    padding: 65px 20px;
+    margin-left: -20px;
+    background-size: calc(100% + 280px) 100%;
+    background-position: center;
+  }
+}
 .registration-page__form form {
-  width: 373px;
   margin-top: 26px;
+}
+@media only screen and (min-width: 768px) {
+  .registration-page__form form {
+    width: 373px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration-page__form form {
+    width: 100%;
+  }
 }
 .registration-page__form-title {
   color: #fff;
@@ -86,10 +109,20 @@
   font-weight: 500;
   background: #fff;
   -webkit-transition: all 150ms;
+  -o-transition: all 150ms;
   transition: all 150ms;
   border: 1px solid #fff;
-  width: 210px;
   margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .registration-page__form-button {
+    width: 210px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration-page__form-button {
+    width: 100%;
+  }
 }
 .registration-page__form-button:hover {
   text-decoration: none;
@@ -103,10 +136,19 @@
   font-size: 14px;
   line-height: 24px;
   margin-top: 20px;
-  padding-left: 34px;
   font-style: italic;
   opacity: 0.6;
-  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .registration-page__form-url {
+    text-align: center;
+    padding-left: 34px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration-page__form-url {
+    text-align: left;
+  }
 }
 .registration-page__form-url a {
   color: #fff;
@@ -115,13 +157,35 @@
   display: inline-block;
   vertical-align: top;
   background: url("../img/form-support.png") no-repeat;
-  padding: 65px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-size: 100% 100%;
   text-align: left;
 }
+@media only screen and (min-width: 768px) {
+  .autorization__form {
+    padding: 65px 120px;
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .autorization__form {
+    width: calc(100% + 40px);
+    padding: 65px 20px;
+    margin-left: -20px;
+    background-size: calc(100% + 280px) 100%;
+    background-position: center;
+  }
+}
 .autorization__form form {
-  width: 373px;
   margin-top: 26px;
+}
+@media only screen and (min-width: 768px) {
+  .autorization__form form {
+    width: 373px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .autorization__form form {
+    width: 100%;
+  }
 }

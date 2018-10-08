@@ -48,25 +48,40 @@
     & + &
       margin-top 0
   &__menu
-    float right
-    min-width 630px    
+    float right  
     margin-top 19px
+    +a($t)
+      min-width 630px  
+    +btw($m, $t)
+      min-width 250px 
+      max-width 630px
+      width calc(100% - 350px)
+    +b($m)
+      width 100%
+      float left
     &-list
       display block
       text-align left
-      border-bottom 1px solid #dcdcdc
       padding-bottom 21px
+      +b($t)
+        margin-left -22.5px
       &-item
         color $black
         font-size 16px
         line-height 41px
-        & + &
-          margin-left 45px
+        display inline-block
+        vertical-align top 
+        +a($t)
+          & + &
+            margin-left 45px
+        +b($t)
+          padding 0 22.5px 
         &:hover
           color $purple
     &-social
       display block
       padding-top 36px
+      border-top 1px solid #dcdcdc
       &-item
         display inline-block
         width 54px

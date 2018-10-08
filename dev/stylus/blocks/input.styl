@@ -149,12 +149,15 @@ button
         background-color #f5f5f5
   &__value
     display inline-block
-    margin-left 20px
     transition opacity $speed
     white-space nowrap
     vertical-align middle
     position relative
     color #fff
+    +a($m)
+      margin-left 20px
+    +b($m)
+      margin-left 10px
     &-text
       display inline-block
       font-size 16px

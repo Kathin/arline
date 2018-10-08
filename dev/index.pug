@@ -127,50 +127,51 @@ block main
     .features
       .container
         h2.features__title Особенности платформы
-        .features__list
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features1.png")
-            h4.features__list-item-title Простота #[br]в использовании
-            .features__list-item-text
-              | Лёгкое создание #[br]
-              | дополненной реальности.
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features2.png")
-            h4.features__list-item-title Добавление видео #[br]на маркер
-            .features__list-item-text
-              | Загружайте напрямую видео #[br]
-              | с youtube или vimeo.
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features3.png")
-            h4.features__list-item-title Гибкие настройки #[br]приватности
-            .features__list-item-text
-              | Возможность использовать #[br]
-              | специальные коды для доступа #[br]
-              | к контенту. 
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features4.png")
-            h4.features__list-item-title 3D-модели
-            .features__list-item-text
-              | С лёгкостью размещайте#[br] 
-              | анимированные 3D-модели.
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features5.png")
-            h4.features__list-item-title Галерея изображений
-            .features__list-item-text
-              | С поддержкой слайд-шоу #[br]
-              | и фоновой музыкой. 
-          .features__list-item
-            .features__list-item-img
-              img(src="img/features6.png")
-            h4.features__list-item-title Аудиозаписи
-            .features__list-item-text
-              | Прикрепляйте аудиозаписи #[br]
-              | к любому изображению.
+        .features__wrap
+          .features__list
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features1.png")
+              h4.features__list-item-title Простота #[br]в использовании
+              .features__list-item-text
+                | Лёгкое создание #[br]
+                | дополненной реальности.
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features2.png")
+              h4.features__list-item-title Добавление видео #[br]на маркер
+              .features__list-item-text
+                | Загружайте напрямую видео #[br]
+                | с youtube или vimeo.
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features3.png")
+              h4.features__list-item-title Гибкие настройки #[br]приватности
+              .features__list-item-text
+                | Возможность использовать #[br]
+                | специальные коды для доступа #[br]
+                | к контенту. 
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features4.png")
+              h4.features__list-item-title 3D-модели
+              .features__list-item-text
+                | С лёгкостью размещайте#[br] 
+                | анимированные 3D-модели.
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features5.png")
+              h4.features__list-item-title Галерея изображений
+              .features__list-item-text
+                | С поддержкой слайд-шоу #[br]
+                | и фоновой музыкой. 
+            .features__list-item
+              .features__list-item-img
+                img(src="img/features6.png")
+              h4.features__list-item-title Аудиозаписи
+              .features__list-item-text
+                | Прикрепляйте аудиозаписи #[br]
+                | к любому изображению.
         .features__anons
           .features__anons-title Конструктором ARLook #[br]уже пользуются
           img(src="img/arrowto.png")
@@ -182,8 +183,8 @@ block main
         .prices__text Цены на пользование сервисом. #[br]Скидки студентам и учебным заведениям
         .prices__tabs
           .prices__tabs-titles
-            .prices__tabs-titles-item.active Цены для физ. лиц
-            .prices__tabs-titles-item Цены для юр. лиц
+            .prices__tabs-titles-item.active #[span.hidden-below-m Цены для физ. лиц] #[span.hidden-above-m Физ. лицам]
+            .prices__tabs-titles-item #[span.hidden-below-m Цены для юр. лиц]#[span.hidden-above-m Юр. лицам]
           .prices__tabs-content
             .prices__tabs-content-item.active
               .prices__tabs-content-block
@@ -267,6 +268,21 @@ block main
                 a.prices__tabs-content-block-button(href="") Попробовать сейчас
     .summary
       .container
+        .summary__partners
+          h2.summary__partners-title Наши партнеры
+          .summary__partners-list
+            .summary__partners-list-item
+              img(src="img/shoptalk.png")
+            .summary__partners-list-item
+              img(src="img/propeller.png")
+            .summary__partners-list-item
+              img(src="img/microsoft.png")
+            .summary__partners-list-item
+              img(src="img/chief.png")
+            .summary__partners-list-item
+              img(src="img/techcrunch.png")
+            .summary__partners-list-item
+              img(src="img/dell.png")
         .summary__form
           h2.summary__form-title Нужно нестандартное решение? 
           .summary__form-text Напишите нам, и мы воплотим любые ваши цифровые фантазии!
@@ -289,40 +305,4 @@ block main
                   span.control__value-text Я согласен 
                     a(href="text-page.html" target="blank") с условиями обработки #[br]персональных данных
             button.summary__form-button Отправить
-        .summary__partners
-          h2.summary__partners-title Наши партнеры
-          .summary__partners-list
-            .summary__partners-list-item
-              img(src="img/shoptalk.png")
-            .summary__partners-list-item
-              img(src="img/propeller.png")
-            .summary__partners-list-item
-              img(src="img/microsoft.png")
-            .summary__partners-list-item
-              img(src="img/chief.png")
-            .summary__partners-list-item
-              img(src="img/techcrunch.png")
-            .summary__partners-list-item
-              img(src="img/dell.png")
-
-
-
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
-      
-      
-
-
   

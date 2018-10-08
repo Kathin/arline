@@ -11,19 +11,34 @@
       color #fff
       overflow hidden
       border-radius 10px
-      width 435px
-      height 435px
-      margin-left 30.5px
-      margin-bottom 30.5px
       align-items flex-start
       justify-content flex-end
       flex-wrap nowrap
       flex-direction column
-      padding 0 0 40px 42px
       box-sizing border-box
       transition all $speed
-      &:nth-child(3n+1)
-        margin-left 0
+      +a($t)
+        /*width 435px
+        height 435px
+        margin-left 30.5px
+        padding 0 0 40px 42px*/
+        margin-left 2.2%
+        margin-bottom 30.5px
+        padding-top calc((100% - 4.4%)/3)
+        width calc((100% - 4.4%)/3)
+        &:nth-child(3n+1)
+          margin-left 0
+      +btw(500px, $t)
+        margin-left 2.2%
+        padding-top calc((100% - 2.2%)/2)
+        width calc((100% - 2.2%)/2)
+        margin-bottom 30.5px
+        &:nth-child(2n+1)
+          margin-left 0
+      +b(500px)
+        padding-top 100%
+        width 100%
+        margin-bottom 30.5px
       &:hover
         box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
         text-decoration none
@@ -36,16 +51,25 @@
         left 0
         right 0
         display block  
+        width 100%
       &-subtitle
         font-size 16px
         line-height 18px
-        position relative
+        position absolute
+        bottom 70px
+        left 42px
+        white-space nowrap
+        overflow ellips
       &-title 
         font-size 24px
         line-height 24px
         margin-top 10px
         font-weight bold
-        position relative
+        position absolute
+        white-space nowrap
+        overflow ellips
+        bottom 40px
+        left 42px
   &__upload
     border-radius 21px
     box-shadow 0px 5px 21.87px 5.13px #e5e7ec

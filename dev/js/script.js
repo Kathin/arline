@@ -748,5 +748,14 @@ jQuery(document).ready(function($) {
               self.scrollLeft(x)
             });
         })
+        $(".prices__tabs-content").each(function() {            
+            var x = (1433 - document.body.clientWidth)/2,
+                self = $(this)
+            self.scrollLeft(x)
+            $( window ).resize(function() {
+              x = (1433 - document.body.clientWidth)/2,
+              self.scrollLeft(x)
+            });
+        })
     })
 })

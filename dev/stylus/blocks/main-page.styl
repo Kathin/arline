@@ -386,20 +386,29 @@
     &__title
       margin-bottom 18px 
       max-width 100% 
-      padding 0 20px
+      +a($m)
+        padding 0 20px
+      +b($m) 
+        padding 0
     &__text
       color $gray
       font-size 16px
       line-height 24px
       max-width 100% 
-      padding 0 20px
+      +a($m)
+        padding 0 20px
+      +b($m) 
+        padding 0
     &__wrap
       max-width 100%
-      overflow auto
       -ms-overflow-style none
       overflow -moz-scrollbars-none
       &::-webkit-scrollbar 
         width 0
+      +a($m)
+        overflow auto
+      +b($m)
+        overflow visible
     &__list
       padding-top 40px
       font-size 0
@@ -466,22 +475,65 @@
   .features
     font-size 0
     line-height 0
-    margin-bottom 50px
+    +a($m)
+      margin-bottom 50px
+    +b($m)
+      margin-bottom 10px
     &__title
-      padding 42px 0 45px
+      padding 42px 0 45px      
+    &__wrap
+      max-width 100%
+      -ms-overflow-style none
+      overflow -moz-scrollbars-none
+      &::-webkit-scrollbar 
+        width 0      
+      +a($d)
+        width 65.5%
+        margin-right 2.5%
+        overflow visible
+        display inline-block
+        vertical-align top
+      +btw($m, $d)
+        width 100%
+        overflow visible
+      +b($m)
+        overflow auto 
     &__list
       display inline-block
       vertical-align top
-      margin-right 35px
-      width 895px
+      //margin-right 35px
+      //width 895px
+      +a($d)
+        width 100%
+      +btw($m, $d)
+        width 100%
+      +b($m)
+        min-width 1530px
       &-item
         display inline-block
         vertical-align top
-        width 250px
-        margin-left 72.5px
+        //width 250px
+        //margin-left 72.5px
         margin-bottom 52px
-        &:nth-child(3n+1)
-          margin-left 0
+        +a($t)
+          width 28%
+          margin-left 8%       
+          &:nth-child(3n+1)
+            margin-left 0
+        +btw($m, $t)
+          width 36%
+          max-width 264px
+          margin-left 8%    
+          margin-right 20%   
+          &:nth-child(2n+1)
+            margin-left 0  
+            margin-right 0 
+        +b($m)
+          width 15%
+          margin-left 2%
+          margin-bottom 0
+          &:first-child
+            margin-left 0
         &-img 
           margin-bottom 35px
         &-title 
@@ -495,12 +547,16 @@
     &__anons
       display inline-block
       vertical-align top
-      width 436px
+      //max-width 436px
       background $purple
       border-radius 24px
       padding 60px 53px 57px
       box-sizing border-box
       color #fff
+      +a($d)
+        width 32%
+      +b($d)
+        display none
       &-title
         font-size 30px
         line-height 37px 
@@ -516,7 +572,10 @@
           line-height 37px
           display block
   .prices
-    margin-bottom 108px
+    +a($d)
+      margin-bottom 64px
+    +b($d)
+      margin-bottom 35px 
     &__title
       margin-bottom 15px
     &__text
@@ -542,9 +601,13 @@
         border-radius 27.5px
         border 1px solid #dcdcdc
         display inline-block
+        white-space nowrap
+        +b($m)
+          width 100%
         &-item 
           display inline-block
           vertical-align top
+          white-space nowrap
           line-height 55px
           height 55px
           font-size 16px
@@ -552,6 +615,10 @@
           padding 0 24px
           border-radius 27.5px
           transition all $speed
+          text-align center
+          +b($m)
+            width 50%
+            box-sizing border-box
           &:hover
             color $purple
             cursor pointer
@@ -564,45 +631,76 @@
             &:hover
               color #ffffff
       &-content
-        margin-top 45px
+        padding 45px
+        min-width 100%
+        -ms-overflow-style none
+        overflow -moz-scrollbars-none
+        margin-left -45px
+        &::-webkit-scrollbar 
+          width 0      
+        +a($m)
+          overflow auto
+        +b($m)
+          overflow visible
         &-item
           font-size 0
           line-height 0
-          display none
+          display none     
+          +a($m)
+            width 1366px
+          +b($m)
+            width 100%
           &.active
             display block
         &-block
-          display inline-block
-          vertical-align top
           background-color #fff
           background-image url('../img/price-block.png')
-          background-position 307px 48px
           background-repeat no-repeat
           border-radius 24px
           border 1px dolid #dcdcdc
           box-shadow 0px 0px 46px 0px rgba(0, 0, 0, 0.19)
-          width 31.8%        
-          height 430px
-          margin-left 2.3%
           border-radius 24px
-          padding 70px 43px 0
-          box-sizing border-box
-          &:first-child
-            margin-left 0
+          box-sizing border-box    
+          +a($m)
+            width 31.8%   
+            height 430px   
+            margin-left 2.3%  
+            display inline-block
+            vertical-align top    
+            background-position 307px 48px   
+            padding 70px 43px 0 
+            &:first-child
+              margin-left 0
+          +b($m)
+            height 385px
+            width 100%
+            max-width 385px
+            display block   
+            margin 0 auto 24px 
+            padding 54px 25px 0 
+            background-position calc(100% - 28px) 20px
           &-title
-            font-size 38px 
-            line-height 38px
             font-weight bold
             margin-bottom 5px
+            +a($m)
+              font-size 38px 
+              line-height 38px
+            +b($m)
+              font-size 27px 
+              line-height 27px
           &-text
             font-size 16px 
             line-height 36px
             color $gray
           &-price
-            font-size 30px 
-            line-height 48px
             font-weight bold
             color #6841f1
+            +a($m)
+              font-size 30px 
+              line-height 48px
+            +b($m)
+              font-size 22px 
+              line-height 48px
           &-list            
             font-size 16px 
             line-height 36px
@@ -632,33 +730,63 @@
             background #fff
             text-decoration none
             transition all $speed
-            margin-top 25px
+            +a($m)
+              margin-top 25px
+            +b($m)
+              margin-top 10px
             &:hover
               background $purple
               color #fff
               text-decoration none
   .summary
-    background url('../img/form-back.png') no-repeat
-    background-position 0 0
-    background-size 48.5% 100%
-    min-height 734px
-    padding-top 156px
+    background url('../img/form-back.png') no-repeat  
     box-sizing border-box
     font-size 0
     margin-bottom 66px
+    +a($d)
+      display flex 
+      direction rtl  
+      min-height 734px
+      background-size 48.5% 100%
+      background-position 0 0
+      padding-top 50px
+    +btw($m, $d)
+      display block
+      background-size 110% 677px
+      background-position 0 100%
+    +b($m)
+      display block
+      background-size 768px 550px
+      background-position -50px 100%
     &__form
-      display inline-block
-      vertical-align top
-      width 525px
+      direction ltr
+      +a($d)
+        display inline-block
+        vertical-align top
+        width 525px
+      +btw($m, $d)
+        display block
+        padding-bottom 110px
+        width 525px
+      +b($m)
+        display block
+        padding-bottom 70px
+        width 100%
       &-title
         color #fff
+        min-width 290px
       &-text
         font-size 16px
         line-height 45px
         color #fff
         margin-bottom 35px
+        white-space nowrap
       form
-        width 373px
+        +a($m)
+          width 373px
+        +b($m)
+          max-width 373px
+          width 100%
       &-input
         display inline-block
         vertical-align top
@@ -687,6 +815,8 @@
         margin-top 30px
         border 1px solid #fff
         transition all $speed
+        +b($m)
+          width 100%
         &.-disable
           opacity 0.5
           pointer-events none        
@@ -696,21 +826,36 @@
           background transparent
           border 1px solid #fff
     &__partners
-      display inline-block
-      vertical-align top
-      width 595px
-      padding-left 243px
+      direction ltr
+      +a($d)
+        display inline-block
+        vertical-align top
+        width 595px
+        padding-left calc(100% - 1120px)
+      +btw($m, $d)
+        display block
+        margin-bottom 100px
+        width 595px
+      +b($m)
+        width 100%
+        margin-bottom 100px
       &-title 
-        margin-bottom 60px
+        +a($m)
+          margin-bottom 60px
+        +b($m)
+          margin-bottom 30px
       &-list 
         &-item 
-          display inline-block
-          vertical-align top
           width 250px
           height 96px
-          margin-left 60px 
-          &:nth-child(2n+1)
-            margin-left 0
+          +a($m)
+            display inline-block
+            vertical-align top
+            margin-left 60px 
+            &:nth-child(2n+1)
+              margin-left 0
+          +b($m)
+            display block
 .registration
   background url('../img/regisback.png')
   background-size 100% 100%
@@ -726,24 +871,35 @@
     padding 153px 0
   &__title
     color #fff
-    line-height 55px
   &__text
     font-size 16px
-    line-height 45px
+    +a($d)
+      line-height 45px
+    +b($d)
+      line-height 24px
+      margin-top 30px
   &__form
     margin-top 40px
     &-input
-      display inline-block
-      vertical-align top
       border-radius 27.5px 
       border 1px solid #fff
-      margin-right 30px
-      width 373px
+      +a($d)
+        display inline-block
+        vertical-align top
+        width 373px    
+        margin-right 30px  
+      +btw($m, $d)
+        display block
+        max-width 373px
+        width 100%
+        margin-bottom 25px  
+      +b($m) 
+        display block
+        width 100%
+        margin-bottom 25px        
       input, .input__error
         color #fff 
     &-button
-      vertical-align top
-      display inline-block
       border-radius 27.5px
       position relative
       font-size 16px
@@ -758,6 +914,16 @@
       background #fff
       border 1px solid #fff
       transition all $speed
+      +a($d)
+        display inline-block
+        vertical-align top
+      +btw($m, $d)
+        display block
+        max-width 210px 
+        width 100%
+      +b($m)
+        display block
+        width 100%
       &:hover
         text-decoration none
         color #fff 

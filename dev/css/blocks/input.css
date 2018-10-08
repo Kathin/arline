@@ -24,6 +24,7 @@
           box-sizing: border-box;
   position: relative;
   -webkit-transition: border-color 150ms;
+  -o-transition: border-color 150ms;
   transition: border-color 150ms;
   background: none;
   box-sizing: border-box;
@@ -65,6 +66,7 @@
   -webkit-text-fill-color: #fff;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
+  -o-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: none;
   background-color: transparent;
@@ -96,6 +98,7 @@
   -webkit-text-fill-color: #fff;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
+  -o-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: none;
 }
@@ -176,6 +179,7 @@ button::-ms-clear {
   vertical-align: middle;
   opacity: 0;
   -webkit-transition: opacity 150ms;
+  -o-transition: opacity 150ms;
   transition: opacity 150ms;
   width: 10px;
   height: 10px;
@@ -194,13 +198,23 @@ button::-ms-clear {
 }
 .control__value {
   display: inline-block;
-  margin-left: 20px;
   -webkit-transition: opacity 150ms;
+  -o-transition: opacity 150ms;
   transition: opacity 150ms;
   white-space: nowrap;
   vertical-align: middle;
   position: relative;
   color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .control__value {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .control__value {
+    margin-left: 10px;
+  }
 }
 .control__value-text {
   display: inline-block;

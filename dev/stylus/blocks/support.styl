@@ -5,11 +5,23 @@
   &__top
     line-height 0
     font-size 0
+    .container
+      +a($t)
+        padding-right 0
     &-about
-      display inline-block
-      vertical-align top
-      width 35.65%
       padding-top 57px
+      +a($t)
+        display inline-block
+        vertical-align top
+        width 35.65%
+      +b($t)
+        display block
+        width 100%
+        max-width 768px
+      &-title 
+        +b($d)
+          line-height 33px
+          font-size 27px
       &-text
         font-size 16px
         line-height 24px
@@ -24,7 +36,6 @@
         height 55px
         line-height 16px
         text-align center
-        padding 20px 25px 19px
         color $purple
         cursor pointer
         box-sizing border-box
@@ -33,24 +44,46 @@
         border 1px solid $purple
         transition all $speed
         margin-top 32px
+        white-space nowrap
+        +a($m)
+          padding 20px 25px 19px
+        +b($m)
+          padding 20px 10px 19px
         &:hover
           text-decoration none
           color #fff 
           background $purple
     &-form
-      display inline-block
-      vertical-align top
-      width 64.35%
       background url("../img/form-support.png") no-repeat
       min-height 585px
-      background-position 65px 0
       padding-top 65px
-      padding-left 224px
       box-sizing border-box
       background-size auto 100%
-      form         
-        width 373px
+      display inline-block
+      vertical-align top
+      +a($t)
+        width 64.35%
+        padding-left 224px
+        background-position 65px 0
+      +btw($m, $t) 
+        padding 65px 190px 65px 40px
+        margin-top 30px
+        background-size calc(100% + 60px) 100%
+        background-position -125px 0
+        margin-left -40px
+      +b($m)
+        width calc(100% + 40px)
+        padding 65px 20px
+        margin-left -20px
+        background-size calc(100% + 280px) 100%
+        background-position center
+        margin-top 30px
+      form       
         margin-top 26px
+        +a($m)
+          width 373px
+        +b($m)
+          width 100%
       &-title
         color #fff
         font-size 23px 
@@ -95,26 +128,39 @@
           background transparent
           border 1px solid #fff
   &__bottom
-    margin-top 10px
+    +a($t)
+      margin-top 10px
+    +b($t)
+      margin-top 50px
   &__faq
     margin-top 25px
     &-item 
       border-radius 11px
       border 1px solid #dcdcdc
-      padding 25px 40px
       cursor pointer
       position relative
+      +a($m)
+        padding 25px 40px
+      +b($m)
+        padding 20px
       &:before
         content ''
         display block
         position absolute
         background url('../img/arrow.png') no-repeat
-        width 18px
-        height 10px
-        top 31px 
-        right 39px  
         transform rotate(180deg) 
-        transition all $speed    
+        transition all $speed 
+        background-size 100% 
+        +a($m)
+          top 31px 
+          right 39px
+          width 18px
+          height 10px
+        +b($m)
+          top 26px
+          right 15px 
+          width 15px
+          height 10px
       & + &
         margin-top 10px
       &.-active
@@ -122,20 +168,29 @@
           content ''
           transform rotate(0deg)   
       &-title
-        font-size 24px 
-        line-height 24px
-        font-weight 500        
+        font-weight 500  
+        +a($m)
+          font-size 24px 
+          line-height 24px
+        +b($m)  
+          font-size 20px 
+          line-height 20px    
       &-text 
-        font-size 18px 
-        line-height 30px
         color $gray
         padding-top 0
         max-width 600px
-        padding-left 45px
         height 0   
         box-sizing border-box
         overflow hidden  
         transition all $speed
+        +a($m)
+          padding-left 45px
+          font-size 18px 
+          line-height 30px
+        +b($m)
+          padding-left 0
+          font-size 16px 
+          line-height 18px
         &.-active
           height auto
           padding-top 10px
