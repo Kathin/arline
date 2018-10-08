@@ -703,4 +703,59 @@ jQuery(document).ready(function($) {
             });
         }
     }
+    /*Анимация для мобильного меню*/
+    $(function() {
+        var pull = $("#pull"),
+            menu = $(".topnav__list"),
+            menuHeight = menu.height(),
+            close = $(".topnav__list-close");
+
+        $(pull).on("click", function(e) {
+            e.preventDefault();
+            menu.animate(
+                {
+                    left: "0px"
+                },
+                200,
+                "linear"
+            );
+            setTimeout(function() {
+                menu.addClass("active");
+            }, 200);
+        });
+        $(close).on("click", function(e) {
+            e.preventDefault();
+            menu.animate(
+                {
+                    left: "-100%"
+                },
+                200,
+                "linear"
+            );
+            setTimeout(function() {
+                menu.removeClass("active");
+            }, 200);
+        });
+    });
+    /*Смещение скролла на главной*/
+    $(function() {
+        $(".sphere__wrap").each(function() {            
+            var x = (1366 - document.body.clientWidth)/2,
+                self = $(this)
+            self.scrollLeft(x)
+            $( window ).resize(function() {
+              x = (1366 - document.body.clientWidth)/2,
+              self.scrollLeft(x)
+            });
+        })
+        $(".prices__tabs-content").each(function() {            
+            var x = (1433 - document.body.clientWidth)/2,
+                self = $(this)
+            self.scrollLeft(x)
+            $( window ).resize(function() {
+              x = (1433 - document.body.clientWidth)/2,
+              self.scrollLeft(x)
+            });
+        })
+    })
 })
